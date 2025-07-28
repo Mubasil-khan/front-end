@@ -15,8 +15,8 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4 md:px-0">
         <div className="Logo">
           <Image
-            src="/Images/logo.png"
-            alt=""
+            src="/Image/logo.png"
+            alt="logo"
             height={130}
             width={130}
             className="object-contain"
