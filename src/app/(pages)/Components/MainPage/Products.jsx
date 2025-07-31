@@ -36,6 +36,19 @@ const Products = () => {
     }
   };
 
+  const UserCartUrl = "http://localhost:1337/api/user-carts?populate=*";
+  const handalCart = (item) => {
+    try {
+      const res = axios.post(UserCartUrl, {
+        data: {
+          ProductId: item.documentId,
+        },
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="container mx-auto p-4 my-4 block">
       <h2 className="font-bold text-3xl text-green-800 my-5 ">
@@ -44,7 +57,7 @@ const Products = () => {
       <Swiper
         spaceBetween={40}
         breakpoints={{
-          640: { slidesPerView: 1 },
+          640: { slidesPerView: 1.2 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
@@ -90,7 +103,7 @@ const Products = () => {
 
                 <Dialog className="ProductSwiper">
                   <DialogTrigger asChild>
-                    <button className="bg-green-600 hover:bg-green-700 w-full flex items-center gap-2 text-white py-2 rounded-full justify-center text-sm font-semibold shadow">
+                    <button className="bg-green-800 hover:bg-green-700 w-full flex items-center gap-2 text-white py-2 rounded-full justify-center text-sm font-semibold shadow">
                       <ShoppingCart size={18} /> Add To Cart
                     </button>
                   </DialogTrigger>
@@ -130,11 +143,10 @@ const Products = () => {
                             <p className="text-gray-400 line-through text-sm font-normal">
                               ₹{item.mrp}
                             </p>
+                            <p className="text-xs bg-green-100 text-green-700 font-medium px-2 py-0.5 rounded-full w-fit">
+                              Inclusive of all taxes
+                            </p>
                           </div>
-
-                          <p className="text-xs bg-green-100 text-green-700 font-medium px-2 py-1 rounded-full w-fit">
-                            Inclusive of all taxes
-                          </p>
 
                           <div className="flex items-center gap-1">
                             <Star className="w-5 h-5 text-yellow-500" />
@@ -145,7 +157,10 @@ const Products = () => {
                           </div>
 
                           <div className="flex gap-4 ">
-                            <button className="bg-green-600 hover:bg-green-700 flex items-center gap-2 text-white py-2 px-6 rounded-full text-sm font-medium shadow">
+                            <button
+                              className="bg-green-600 hover:bg-green-700 flex items-center gap-2 text-white py-2 px-6 rounded-full text-sm font-medium shadow"
+                              onClick={() => handalCart(item)}
+                            >
                               <ShoppingCart size={18} /> Add To Cart
                             </button>
 

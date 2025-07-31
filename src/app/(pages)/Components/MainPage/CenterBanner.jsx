@@ -11,7 +11,7 @@ const CenterBanner = () => {
           fill
           className="object-cover"
         />
-        <div className="absolute top-[25%] left-[4%]  flex-col gap-1">
+        <div className="absolute top-[25%] left-[4%] flex flex-col gap-1">
           <h4 className="text-2xl font-semibold text-gray-600">
             Fruits & Vegetables
           </h4>
@@ -28,7 +28,7 @@ const CenterBanner = () => {
           fill
           className="object-cover"
         />
-        <div className="absolute top-[25%] left-[4%]  flex-col gap-1">
+        <div className="absolute top-[25%] left-[4%] flex  flex-col gap-1">
           <h4 className="text-2xl font-semibold text-gray-600">
             Fruits & Vegetables
           </h4>
