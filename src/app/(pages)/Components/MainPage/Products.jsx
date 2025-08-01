@@ -103,7 +103,7 @@ const Products = () => {
       >
         {data.map((item, index) => {
           const imageUrl = item.image?.[0]?.url
-            ? `http://localhost:1337${item.image[0].url}`
+            ? `https://strapi-backend-1-7qd7.onrender.com${item.image[0].url}`
             : "/placeholder.png";
 
           return (

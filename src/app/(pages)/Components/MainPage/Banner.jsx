@@ -31,11 +31,11 @@ const Banner = () => {
             <SwiperSlide key={item.id}>
               <div className="relative h-[200px] md:h-[300px] w-full overflow-hidden rounded-3xl shadow-md">
                 <Image
-                  src={`http://localhost:1337${item.BannerImg?.[0].url}`}
+                  src={`https://strapi-backend-1-7qd7.onrender.com${item.BannerImg?.[0].url}`}
                   alt="Banner"
                   fill
                   unoptimized
-                  className="object:fill"
+                  className="object-cover"
                 />
               </div>
             </SwiperSlide>

@@ -57,7 +57,7 @@ const Categories = () => {
               <div className="flex flex-col justify-center items-center gap-2 bg-green-100 group py-4  rounded-3xl ">
                 <div className=" duration-300 group-hover:scale-110">
                   <Image
-                    src={`http://localhost:1337${item?.icon?.[0]?.url}`}
+                    src={`https://strapi-backend-1-7qd7.onrender.com${item?.icon?.[0]?.url}`}
                     alt="CategoriesImage"
                     height={80}
                     width={80}

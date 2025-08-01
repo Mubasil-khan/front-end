@@ -49,11 +49,11 @@ const Banner = ()=>{
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative h-[200px] md:h-[300px] w-full overflow-hidden rounded-3xl shadow-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            src: "http://localhost:1337".concat((_item_BannerImg = item.BannerImg) === null || _item_BannerImg === void 0 ? void 0 : _item_BannerImg[0].url),
+                            src: "https://strapi-backend-1-7qd7.onrender.com".concat((_item_BannerImg = item.BannerImg) === null || _item_BannerImg === void 0 ? void 0 : _item_BannerImg[0].url),
                             alt: "Banner",
                             fill: true,
                             unoptimized: true,
-                            className: "object:fill"
+                            className: "object-cover"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
                             lineNumber: 33,
@@ -171,7 +171,7 @@ const Categories = ()=>{
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: " duration-300 group-hover:scale-110",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            src: "http://localhost:1337".concat(item === null || item === void 0 ? void 0 : (_item_icon = item.icon) === null || _item_icon === void 0 ? void 0 : (_item_icon_ = _item_icon[0]) === null || _item_icon_ === void 0 ? void 0 : _item_icon_.url),
+                                            src: "https://strapi-backend-1-7qd7.onrender.com".concat(item === null || item === void 0 ? void 0 : (_item_icon = item.icon) === null || _item_icon === void 0 ? void 0 : (_item_icon_ = _item_icon[0]) === null || _item_icon_ === void 0 ? void 0 : _item_icon_.url),
                                             alt: "CategoriesImage",
                                             height: 80,
                                             width: 80,
@@ -571,7 +571,7 @@ const Products = ()=>{
                 },
                 children: data.map((item, index)=>{
                     var _item_image_, _item_image, _item_categories_, _item_categories;
-                    const imageUrl = ((_item_image = item.image) === null || _item_image === void 0 ? void 0 : (_item_image_ = _item_image[0]) === null || _item_image_ === void 0 ? void 0 : _item_image_.url) ? "http://localhost:1337".concat(item.image[0].url) : "/placeholder.png";
+                    const imageUrl = ((_item_image = item.image) === null || _item_image === void 0 ? void 0 : (_item_image_ = _item_image[0]) === null || _item_image_ === void 0 ? void 0 : _item_image_.url) ? "https://strapi-backend-1-7qd7.onrender.com".concat(item.image[0].url) : "/placeholder.png";
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SwiperSlide"], {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: " border rounded-2xl border-gray-300 p-4 flex flex-col gap-2 cursor-pointer group shadow-sm hover:shadow-md transition-shadow",
