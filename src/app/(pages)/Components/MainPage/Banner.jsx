@@ -33,8 +33,8 @@ const Banner = () => {
                 <Image
                   src={`https://strapi-backend-1-7qd7.onrender.com${item.BannerImg?.[0].url}`}
                   alt="Banner"
-                  fill
                   unoptimized
+                  fill
                   className="object-cover"
                 />
               </div>
