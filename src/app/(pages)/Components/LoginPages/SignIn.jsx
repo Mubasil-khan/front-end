@@ -40,7 +40,7 @@ const SignIn = () => {
   const [identify, setIdentify] = useState("");
   const [password, setPassword] = useState("");
 
-  const authUrl = "http://localhost:1337/api/auth/local";
+  const authUrl = "https://strapi-backend-1-7qd7.onrender.com/api/auth/local";
 
   const handalSingIn = async () => {
     try {

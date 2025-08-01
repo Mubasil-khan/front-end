@@ -40,7 +40,8 @@ const SignUp = () => {
     });
   };
   const router = useRouter();
-  const RegisterUrl = "http://localhost:1337/api/auth/local/register";
+  const RegisterUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/auth/local/register";
 
   const handalSignup = async () => {
     try {

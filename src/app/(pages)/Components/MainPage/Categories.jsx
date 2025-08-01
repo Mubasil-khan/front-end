@@ -10,7 +10,9 @@ const Categories = () => {
   useEffect(() => {
     display();
   }, []);
-  const Categoriesurl = "http://localhost:1337/api/categories?populate=*";
+  const Categoriesurl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/categories?populate=*";
+
   const [data, setData] = useState([]);
 
   const display = async () => {

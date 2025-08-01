@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/(pages)/cart/page": "/cart",
+  "/(pages)/checkout/page": "/checkout",
+  "/(pages)/signUp/page": "/signUp",
+  "/(pages)/signIn/page": "/signIn"
+}

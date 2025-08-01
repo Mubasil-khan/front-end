@@ -8,7 +8,8 @@ import "swiper/css";
 const Banner = () => {
   const [data, setData] = useState([]);
 
-  const bannerUrl = "http://localhost:1337/api/banners?populate=*";
+  const bannerUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/banners?populate=*";
 
   const Banners = async () => {
     try {

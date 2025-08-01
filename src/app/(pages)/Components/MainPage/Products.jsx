@@ -24,13 +24,15 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 
 const Products = () => {
   const [data, setData] = useState([]);
-  const ProductUrl = "http://localhost:1337/api/products?populate=*";
+  const ProductUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
 
   useEffect(() => {
     getData();
   }, []);
 
-  const UserCartUrl = "http://localhost:1337/api/user-carts?populate=*";
+  const UserCartUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate=*";
 
   const router = useRouter();
 

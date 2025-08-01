@@ -44,7 +44,8 @@ const Navbar = () => {
   const [productdata, setProductdata] = useState([]);
   const [cartdata, setCartdata] = useState([]);
 
-  const UserCartUrl = "http://localhost:1337/api/user-carts?populate=*";
+  const UserCartUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate=*";
 
   const GetCartData = async () => {
     try {
@@ -58,7 +59,7 @@ const Navbar = () => {
   const deleteData = async (id) => {
     try {
       const res = await axios.delete(
-        `http://localhost:1337/api/user-carts/${id}`
+        `https://strapi-backend-1-7qd7.onrender.com/api/user-carts/${id}`
       );
 
       GetCartData();
@@ -73,7 +74,9 @@ const Navbar = () => {
   };
 
   // Product
-  const ProductUrl = "http://localhost:1337/api/products?populate=*";
+  const ProductUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
+
   const getData = async () => {
     try {
       const res = await axios.get(ProductUrl);
