@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Boxes, Heart, Rocket, ShoppingCart } from "lucide-react";
@@ -8,7 +8,6 @@ import { Star, StarHalf } from "lucide-react";
 
 import "swiper/css";
 import InnerImageZoom from "react-inner-image-zoom";
-// import "react-inner-image-zoom/styles.css";
 import "react-inner-image-zoom/lib/styles.min.css";
 
 import {
@@ -18,16 +17,25 @@ import {
   DialogTrigger,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 const Products = () => {
   const [data, setData] = useState([]);
   const ProductUrl = "http://localhost:1337/api/products?populate=*";
 
   useEffect(() => {
-    prdoductDisplay();
+    getData();
   }, []);
 
-  const prdoductDisplay = async () => {
+  const UserCartUrl = "http://localhost:1337/api/user-carts?populate=*";
+
+  const router = useRouter();
+
+  // 1. Fetch current cart items
+  const getData = async () => {
     try {
       const res = await axios.get(ProductUrl);
       setData(res.data.data);
@@ -36,21 +44,49 @@ const Products = () => {
     }
   };
 
-  const UserCartUrl = "http://localhost:1337/api/user-carts?populate=*";
-  const handalCart = (item) => {
+  const handalCart = async (item) => {
     try {
-      const res = axios.post(UserCartUrl, {
-        data: {
-          ProductId: item.documentId,
-        },
-      });
+      const token = localStorage.getItem("Token");
+      if (!token) {
+        router.push("/signUp");
+        return;
+      }
+      const getData = await axios.get(UserCartUrl);
+      const AlreadyCart = getData.data.data;
+
+      const existingProduct = AlreadyCart.some(
+        (cartItem) => cartItem.ProductId === item.documentId
+      );
+
+      if (existingProduct) {
+        toast.error("Heads up! This product is already waiting in your cart.", {
+          position: "top-right",
+          autoClose: 2000,
+          theme: "colored",
+        });
+      } else {
+        await axios.post(UserCartUrl, {
+          data: {
+            ProductId: item.documentId,
+          },
+        });
+
+        toast.success("Product added – keep exploring!", {
+          position: "top-right",
+          autoClose: 2000,
+          theme: "colored",
+        });
+      }
+      //  Add new product to cart
     } catch (error) {
       console.error(error);
+      toast.error("Something went wrong");
     }
   };
 
   return (
     <div className="container mx-auto p-4 my-4 block">
+      <ToastContainer />
       <h2 className="font-bold text-3xl text-green-800 my-5 ">
         Farm-Fresh Goodness: Fruits & Vegetables
       </h2>
@@ -63,13 +99,13 @@ const Products = () => {
           1280: { slidesPerView: 4 },
         }}
       >
-        {data.map((item) => {
+        {data.map((item, index) => {
           const imageUrl = item.image?.[0]?.url
             ? `http://localhost:1337${item.image[0].url}`
             : "/placeholder.png";
 
           return (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={index}>
               <div className=" border rounded-2xl border-gray-300 p-4 flex flex-col gap-2 cursor-pointer group shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex justify-center relative">
                   <Image
@@ -109,6 +145,7 @@ const Products = () => {
                   </DialogTrigger>
 
                   <DialogContent className="max-w-[800px] max-h-[100vh] overflow-y-auto">
+                    <DialogTitle></DialogTitle>
                     <DialogDescription>
                       <div className="flex flex-col md:flex-row gap-6 p-4 rounded-2xl border relative">
                         <div className="w-full md:w-1/2 flex justify-center">
@@ -155,19 +192,22 @@ const Products = () => {
                             <Star className="w-5 h-5 text-yellow-500" />
                             <StarHalf className="w-5 h-5 text-yellow-500" />
                           </div>
+                          <DialogClose asChild>
+                            <div className="flex gap-4 ">
+                              <button
+                                className="bg-green-600 hover:bg-green-700 flex items-center gap-2 text-white py-2 px-6 rounded-full text-sm font-medium shadow"
+                                onClick={() => {
+                                  handalCart(item);
+                                }}
+                              >
+                                <ShoppingCart size={18} /> Add To Cart
+                              </button>
 
-                          <div className="flex gap-4 ">
-                            <button
-                              className="bg-green-600 hover:bg-green-700 flex items-center gap-2 text-white py-2 px-6 rounded-full text-sm font-medium shadow"
-                              onClick={() => handalCart(item)}
-                            >
-                              <ShoppingCart size={18} /> Add To Cart
-                            </button>
-
-                            <button className="border border-green-600 text-green-700 flex items-center gap-2 hover:bg-green-50 py-2 px-4 rounded-full text-sm font-medium">
-                              <Heart size={16} /> Wishlist
-                            </button>
-                          </div>
+                              <button className="border border-green-600 text-green-700 flex items-center gap-2 hover:bg-green-50 py-2 px-4 rounded-full text-sm font-medium">
+                                <Heart size={16} /> Wishlist
+                              </button>
+                            </div>
+                          </DialogClose>
 
                           <div className="mt-2 flex flex-col gap-2 text-sm text-green-800">
                             <div className="flex items-center gap-1">
@@ -194,27 +234,3 @@ const Products = () => {
 };
 
 export default Products;
-
-<button
-  type="button"
-  data-slot="dialog-close"
-  class="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="lucide lucide-x"
-    aria-hidden="true"
-  >
-    <path d="M18 6 6 18"></path>
-    <path d="m6 6 12 12"></path>
-  </svg>
-  <span class="sr-only">Close</span>
-</button>;

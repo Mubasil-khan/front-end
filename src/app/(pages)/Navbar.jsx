@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AlignJustify, Search, ShoppingCart, Trash2 } from "lucide-react";
+import { AlignJustify, Search, ShoppingCart, Trash2, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -14,6 +14,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,6 +28,8 @@ import { decrement, increment } from "@/app/features";
 
 const Navbar = () => {
   const [hide, setHide] = useState(false);
+
+  const [login, setLogin] = useState(false);
 
   const manageMenu = () => {
     setHide((a) => !a);
@@ -58,7 +67,10 @@ const Navbar = () => {
     }
   };
 
-  const HandalCheckOut = () => {};
+  const handalLogout = () => {
+    localStorage.removeItem("Token");
+    setLogin(false);
+  };
 
   // Product
   const ProductUrl = "http://localhost:1337/api/products?populate=*";
@@ -73,16 +85,18 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const checkLogin = localStorage.getItem("Token");
+    setLogin(!!checkLogin);
     GetCartData();
     getData();
   }, []);
-  if (cartdata.length === 0) {
-    return (
-      <div>
-        <h1>Your Cart Is empty</h1>
-      </div>
-    );
-  }
+  // if (cartdata.length === 0) {
+  //   return (
+  //     <div>
+  //       <h1>Your Cart Is empty</h1>
+  //     </div>
+  //   );
+  // }
   //.........................
   return (
     <div className="bg-green-100 py-2 sticky top-0 z-10">
@@ -219,12 +233,32 @@ const Navbar = () => {
             className="h-6 w-6 md:hidden cursor-pointer"
             onClick={manageMenu}
           />
-          <Link
-            href=""
-            className="text-white bg-green-700 py-1 px-4 rounded-md"
-          >
-            Login
-          </Link>
+
+          {login ? (
+            <div className="bg-green-800 p-1 rounded-full">
+              <Select
+                onValueChange={(value) => value === "logout" && handalLogout()}
+              >
+                <SelectTrigger>
+                  <User className="text-green-500" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="logout" className="text-red-700 text-xl">
+                    Logout
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          ) : (
+            <Link
+              href="/signUp"
+              className="text-white bg-green-700 py-1 px-4 rounded-md"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
       {hide && (
