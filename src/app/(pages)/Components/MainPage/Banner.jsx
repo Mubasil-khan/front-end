@@ -31,7 +31,7 @@ const Banner = () => {
         {data.map((item) => {
           return (
             <SwiperSlide key={item.id}>
-              <div className="relative min-h-100 w-full h-full overflow-hidden rounded-3xl shadow-md">
+              <div className="relative min-h-40 md:min-h-100 w-full h-full overflow-hidden rounded-3xl shadow-md">
                 <Image
                   src={item.BannerImg[0].url}
                   alt="Banner"
