@@ -15,6 +15,8 @@ const Banner = () => {
     try {
       const response = await axios.get(bannerUrl);
       setData(response.data.data);
+
+      console.log("Image....", response.data.data);
     } catch (error) {
       console.error(error);
     }
@@ -29,13 +31,13 @@ const Banner = () => {
         {data.map((item) => {
           return (
             <SwiperSlide key={item.id}>
-              <div className="relative h-[200px] md:h-[300px] w-full overflow-hidden rounded-3xl shadow-md">
+              <div className="relative min-h-100 w-full h-full overflow-hidden rounded-3xl shadow-md">
                 <Image
-                  src={`https://strapi-backend-1-7qd7.onrender.com${item.BannerImg?.[0].url}`}
+                  src={item.BannerImg[0].url}
                   alt="Banner"
                   unoptimized
                   fill
-                  className="object-cover"
+                  className="object-fill"
                 />
               </div>
             </SwiperSlide>

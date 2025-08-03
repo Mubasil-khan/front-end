@@ -25,6 +25,7 @@ const Banner = ()=>{
         try {
             const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(bannerUrl);
             setData(response.data.data);
+            console.log("Image....", response.data.data);
         } catch (error) {
             console.error(error);
         }
@@ -40,37 +41,37 @@ const Banner = ()=>{
             children: data.map((item)=>{
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SwiperSlide"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative h-[200px] md:h-[300px] w-full overflow-hidden rounded-3xl shadow-md",
+                        className: "relative min-h-100 w-full h-full overflow-hidden rounded-3xl shadow-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            src: `https://strapi-backend-1-7qd7.onrender.com${item.BannerImg?.[0].url}`,
+                            src: item.BannerImg[0].url,
                             alt: "Banner",
                             unoptimized: true,
                             fill: true,
-                            className: "object-cover"
+                            className: "object-fill"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-                            lineNumber: 33,
+                            lineNumber: 35,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-                        lineNumber: 32,
+                        lineNumber: 34,
                         columnNumber: 15
                     }, ("TURBOPACK compile-time value", void 0))
                 }, item.id, false, {
                     fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 13
                 }, ("TURBOPACK compile-time value", void 0));
             })
         }, void 0, false, {
             fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-            lineNumber: 28,
+            lineNumber: 30,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

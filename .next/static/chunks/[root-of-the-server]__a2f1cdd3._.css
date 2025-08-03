@@ -975,6 +975,22 @@
     max-height: 100vh;
   }
 
+  .min-h-10 {
+    min-height: calc(var(--spacing) * 10);
+  }
+
+  .min-h-50 {
+    min-height: calc(var(--spacing) * 50);
+  }
+
+  .min-h-60 {
+    min-height: calc(var(--spacing) * 60);
+  }
+
+  .min-h-100 {
+    min-height: calc(var(--spacing) * 100);
+  }
+
   .w-3\/4 {
     width: 75%;
   }
@@ -1344,6 +1360,10 @@
 
   .object-cover {
     object-fit: cover;
+  }
+
+  .object-fill {
+    object-fit: fill;
   }
 
   .p-1 {
@@ -2052,6 +2072,12 @@
   @media (min-width: 40rem) {
     .sm\:grid {
       display: grid;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:h-\[200px\] {
+      height: 200px;
     }
   }
 
