@@ -1159,6 +1159,11 @@
     border-bottom-left-radius: var(--radius-3xl);
   }
 
+  .rounded-b-full {
+    border-bottom-right-radius: 3.40282e38px;
+    border-bottom-left-radius: 3.40282e38px;
+  }
+
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
