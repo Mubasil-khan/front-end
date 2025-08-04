@@ -104,7 +104,7 @@ const Navbar = () => {
   //.........................
 
   const pathname = usePathname();
-  const hidecart = pathname === "/checkout";
+  const hidecart = pathname === "/CheckOut";
   return (
     <div className="bg-green-100 py-2 sticky top-0 z-10 rounded-b-3xl">
       <div className="container mx-auto flex items-center justify-between px-4 md:px-0">
@@ -233,7 +233,7 @@ const Navbar = () => {
                       <span>₹{OverAllTotal}</span>
                     </h2>
                     <Link
-                      href="/checkOut"
+                      href="/CheckOut"
                       className="bg-green-800 text-white text-center px-6 py-2 rounded-md hover:bg-green-700 transition"
                     >
                       Checkout

@@ -1,4 +1,5 @@
 {
+  "/(pages)/CheckOut/page": "app/(pages)/CheckOut/page.js",
   "/(pages)/Checkout/page": "app/(pages)/Checkout/page.js",
   "/(pages)/cart/page": "app/(pages)/cart/page.js",
   "/(pages)/checkOut/page": "app/(pages)/checkOut/page.js",
