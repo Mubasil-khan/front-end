@@ -7,8 +7,11 @@ const OrderDetail = () => {
   const [product, setPeoduct] = useState([]);
   const [userCart, setUserCart] = useState([]);
 
-  const UCart = "http://localhost:1337/api/user-carts?populate=*";
-  const ProductUrl = "http://localhost:1337/api/products?populate=*";
+  const UCart =
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate=*";
+
+  const ProductUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
 
   const getProduct = async () => {
     try {
@@ -34,19 +37,23 @@ const OrderDetail = () => {
   }, []);
 
   const [qty, setQty] = useState(22);
-  const OrderUrl = "http://localhost:1337/api/orders?populate=*";
+  const OrderUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
 
   const handalOrder = async (id) => {
     try {
-      const res = await axios.put(`http://localhost:1337/api/orders${id}`, {
-        data: {
-          OrderDetails: [
-            {
-              Qty: qty,
-            },
-          ],
-        },
-      });
+      const res = await axios.put(
+        `https://strapi-backend-1-7qd7.onrender.com/api/orders${id}`,
+        {
+          data: {
+            OrderDetails: [
+              {
+                Qty: qty,
+              },
+            ],
+          },
+        }
+      );
     } catch (error) {
       console.error(error);
     }
@@ -62,7 +69,7 @@ const OrderDetail = () => {
               return (
                 <div className="grid grid-cols-4 ">
                   <Image
-                    src={`http://localhost:1337${productitem.image[0].url}`}
+                    src={productitem.image[0].url}
                     alt="productitem.image"
                     height={60}
                     width={60}

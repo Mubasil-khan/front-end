@@ -11,12 +11,12 @@ const CenterBanner = () => {
           fill
           className="object-cover"
         />
-        <div className="absolute top-[25%] left-[4%] flex flex-col gap-1">
-          <h4 className="text-2xl font-semibold text-gray-600">
+        <div className="absolute top-[25%] left-[4%] flex  flex-col gap-1">
+          <h4 className="text-2xl font-semibold text-green-800">
             Fruits & Vegetables
           </h4>
-          <p className="text-lg  text-gray-600">Get Upto 30% Off</p>
-          <button className=" rounded-3xl mt-2 py-1.5 bg-gray-600 cursor-pointer w-full">
+          <p className="text-lg  text-green-800">Get Upto 30% Off</p>
+          <button className=" rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full">
             Shop Now
           </button>
         </div>
@@ -29,11 +29,11 @@ const CenterBanner = () => {
           className="object-cover"
         />
         <div className="absolute top-[25%] left-[4%] flex  flex-col gap-1">
-          <h4 className="text-2xl font-semibold text-gray-600">
+          <h4 className="text-2xl font-semibold text-green-800">
             Fruits & Vegetables
           </h4>
-          <p className="text-lg  text-gray-600">Get Upto 30% Off</p>
-          <button className=" rounded-3xl mt-2 py-1.5 bg-gray-600 cursor-pointer w-full">
+          <p className="text-lg  text-green-800">Get Upto 30% Off</p>
+          <button className=" rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full">
             Shop Now
           </button>
         </div>

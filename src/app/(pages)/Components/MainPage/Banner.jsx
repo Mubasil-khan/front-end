@@ -24,7 +24,7 @@ const Banner = () => {
     Banners();
   }, []);
   return (
-    <div className="container mx-auto p-4 my-4 block">
+    <div className="container mx-auto p-4  block">
       <Swiper spaceBetween={50} slidesPerView={1}>
         {data.map((item) => {
           return (

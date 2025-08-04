@@ -89,8 +89,8 @@ const Products = () => {
   return (
     <div className="container mx-auto p-4 my-4 block">
       <ToastContainer />
-      <h2 className="font-bold text-3xl text-green-800 my-5 ">
-        Farm-Fresh Goodness: Fruits & Vegetables
+      <h2 className="font-bold text-2xl md:text-3xl text-green-800 my-5 ">
+        Farm-Fresh Goodness : <br className="sm:hidden" /> Fruits & Vegetables
       </h2>
       <Swiper
         spaceBetween={40}

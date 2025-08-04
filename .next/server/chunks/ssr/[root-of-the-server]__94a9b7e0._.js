@@ -107,10 +107,10 @@ const CenterBanner = ()=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-[25%] left-[4%] flex flex-col gap-1",
+                        className: "absolute top-[25%] left-[4%] flex  flex-col gap-1",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                className: "text-2xl font-semibold text-gray-600",
+                                className: "text-2xl font-semibold text-green-800",
                                 children: "Fruits & Vegetables"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
@@ -118,7 +118,7 @@ const CenterBanner = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-lg  text-gray-600",
+                                className: "text-lg  text-green-800",
                                 children: "Get Upto 30% Off"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
@@ -126,7 +126,7 @@ const CenterBanner = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: " rounded-3xl mt-2 py-1.5 bg-gray-600 cursor-pointer w-full",
+                                className: " rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full",
                                 children: "Shop Now"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
@@ -162,7 +162,7 @@ const CenterBanner = ()=>{
                         className: "absolute top-[25%] left-[4%] flex  flex-col gap-1",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                className: "text-2xl font-semibold text-gray-600",
+                                className: "text-2xl font-semibold text-green-800",
                                 children: "Fruits & Vegetables"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
@@ -170,7 +170,7 @@ const CenterBanner = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-lg  text-gray-600",
+                                className: "text-lg  text-green-800",
                                 children: "Get Upto 30% Off"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
@@ -178,7 +178,7 @@ const CenterBanner = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: " rounded-3xl mt-2 py-1.5 bg-gray-600 cursor-pointer w-full",
+                                className: " rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full",
                                 children: "Shop Now"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
@@ -231,7 +231,7 @@ const Fetures = ()=>{
                     className: "flex flex-col gap-1 items-center justify-center ",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$truck$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Truck$3e$__["Truck"], {
-                            className: "h-15 w-15 text-green-800"
+                            className: "h-12 w-12 md:h-15 md:w-15 text-green-800"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Fetures.jsx",
                             lineNumber: 9,
@@ -266,7 +266,7 @@ const Fetures = ()=>{
                     className: "flex flex-col gap-1 items-center justify-center ",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
-                            className: "h-15 w-15 text-green-800"
+                            className: "h-12 w-12 md:h-15 md:w-15 text-green-800"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Fetures.jsx",
                             lineNumber: 18,
@@ -298,7 +298,7 @@ const Fetures = ()=>{
                     className: "flex flex-col gap-1 items-center justify-center ",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$store$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Store$3e$__["Store"], {
-                            className: "h-15 w-15 text-green-800"
+                            className: "h-12 w-12 md:h-15 md:w-15 text-green-800"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Fetures.jsx",
                             lineNumber: 27,
@@ -330,7 +330,7 @@ const Fetures = ()=>{
                     className: "flex flex-col gap-1 items-center justify-center ",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Lock$3e$__["Lock"], {
-                            className: "h-15 w-15 text-green-800"
+                            className: "h-12 w-12 md:h-15 md:w-15 text-green-800"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Fetures.jsx",
                             lineNumber: 36,

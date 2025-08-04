@@ -39,7 +39,7 @@ const Banner = ()=>{
         }
     }["Banner.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "container mx-auto p-4 my-4 block",
+        className: "container mx-auto p-4  block",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Swiper"], {
             spaceBetween: 50,
             slidesPerView: 1,
@@ -129,10 +129,11 @@ const Categories = ()=>{
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "container mx-auto p-4 my-4 block",
+        className: "container mx-auto p-4 my-4 block ",
+        id: "categories",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "font-bold text-3xl text-green-800 my-5 ",
+                className: "font-bold text-2xl md:text-3xl text-green-800 my-5 ",
                 children: "Shop by Categories"
             }, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
@@ -546,9 +547,19 @@ const Products = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "font-bold text-3xl text-green-800 my-5 ",
-                children: "Farm-Fresh Goodness: Fruits & Vegetables"
-            }, void 0, false, {
+                className: "font-bold text-2xl md:text-3xl text-green-800 my-5 ",
+                children: [
+                    "Farm-Fresh Goodness : ",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                        className: "sm:hidden"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                        lineNumber: 93,
+                        columnNumber: 31
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    " Fruits & Vegetables"
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
                 lineNumber: 92,
                 columnNumber: 7
