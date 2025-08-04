@@ -52,6 +52,10 @@ const SignIn = () => {
       success();
       const jwttoken = res.data.jwt;
       localStorage.setItem("Token", jwttoken);
+
+      const userId = res.data.user.id;
+      localStorage.setItem("userId", userId);
+
       router.push("/");
     } catch (error) {
       console.error(error);

@@ -49,6 +49,7 @@ const Products = () => {
   const handalCart = async (item) => {
     try {
       const token = localStorage.getItem("Token");
+      const UserId = localStorage.getItem("userId");
       if (!token) {
         router.push("/signUp");
         return;
@@ -67,11 +68,20 @@ const Products = () => {
           theme: "colored",
         });
       } else {
-        await axios.post(UserCartUrl, {
-          data: {
-            ProductId: item.documentId,
+        await axios.post(
+          UserCartUrl,
+          {
+            data: {
+              ProductId: item.documentId,
+              users_permissions_user: UserId,
+            },
           },
-        });
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // ✅ secure POST
+            },
+          }
+        );
 
         toast.success("Product added – keep exploring!", {
           position: "top-right",

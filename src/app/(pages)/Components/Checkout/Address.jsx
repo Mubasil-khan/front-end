@@ -150,7 +150,7 @@ const Address = () => {
                   minLength={20}
                 ></textarea>
               </div>
-              <div className="sm:grid grid-cols-2  gap-8">
+              <div className="flex flex-col gap-5 sm:grid grid-cols-2  sm:gap-8">
                 <div>
                   <label
                     htmlFor="city"
@@ -188,7 +188,7 @@ const Address = () => {
                   />
                 </div>
               </div>
-              <div className="sm:grid grid-cols-2  gap-8">
+              <div className="flex flex-col gap-5 sm:grid grid-cols-2  sm:gap-8">
                 <div>
                   <label
                     htmlFor="zip"

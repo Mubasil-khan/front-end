@@ -4,6 +4,8 @@
   "/(pages)/cart/page": "app/(pages)/cart/page.js",
   "/(pages)/checkOut/page": "app/(pages)/checkOut/page.js",
   "/(pages)/checkout/page": "app/(pages)/checkout/page.js",
+  "/(pages)/signIn/page": "app/(pages)/signIn/page.js",
+  "/(pages)/signUp/page": "app/(pages)/signUp/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"

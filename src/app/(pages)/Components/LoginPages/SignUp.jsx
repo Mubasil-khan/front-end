@@ -53,6 +53,9 @@ const SignUp = () => {
       success();
       const jwtToken = res.data.jwt;
       localStorage.setItem("Token", jwtToken);
+
+      const userId = res.data.user.id;
+      localStorage.setItem("userId", userId);
       router.push("/");
     } catch (error) {
       Alert();

@@ -50,10 +50,23 @@ const Navbar = () => {
 
   const GetCartData = async () => {
     try {
-      const res = await axios.get(UserCartUrl);
-      setCartdata(res.data.data);
+      const token = localStorage.getItem("Token");
+      const userId = localStorage.getItem("userId");
+
+      const res = await axios.get(UserCartUrl, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      // Filter cart items to only include current user's items
+      const userCartItems = res.data.data.filter(
+        (item) => item?.users_permissions_user?.id == userId
+      );
+
+      setCartdata(userCartItems);
     } catch (error) {
-      console.error(error);
+      console.error("Cart fetch error:", error);
     }
   };
 

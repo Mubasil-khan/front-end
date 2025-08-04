@@ -2023,6 +2023,12 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:gap-8 {
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:text-left {
       text-align: left;
     }
