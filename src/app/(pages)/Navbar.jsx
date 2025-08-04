@@ -46,18 +46,17 @@ const Navbar = () => {
   const [cartdata, setCartdata] = useState([]);
 
   const UserCartUrl =
-    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate=*";
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image";
 
   const GetCartData = async () => {
     try {
       const token = localStorage.getItem("Token");
       const userId = localStorage.getItem("userId");
 
-      const res = await axios.get(UserCartUrl, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(UserCartUrl);
+      setProductdata(res.data.data);
+
+      console.log("Data Is ..............", res.data.data);
 
       // Filter cart items to only include current user's items
       const userCartItems = res.data.data.filter(
@@ -88,24 +87,24 @@ const Navbar = () => {
   };
 
   // Product
-  const ProductUrl =
-    "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
+  // const ProductUrl =
+  //   "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
 
-  const getData = async () => {
-    try {
-      const res = await axios.get(ProductUrl);
-      setProductdata(res.data.data);
-      console.log("My data For Image", res.data.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const getData = async () => {
+  //   try {
+  //     const res = await axios.get(ProductUrl);
+  //     setProductdata(res.data.data);
+  //     console.log("My data For Image", res.data.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   useEffect(() => {
     const checkLogin = localStorage.getItem("Token");
     setLogin(!!checkLogin);
     GetCartData();
-    getData();
+    // getData();
   }, []);
   // if (cartdata.length === 0) {
   //   return (
@@ -163,34 +162,44 @@ const Navbar = () => {
 
                 {/* Scrollable Cart Items */}
                 <div className="flex-1 overflow-y-auto">
-                  {cartdata.map((Cartitem) =>
-                    productdata.map((Productitem) => {
-                      if (Cartitem.ProductId === Productitem.documentId) {
-                        const count = counts[Productitem.id] || 1;
-                        const total = count * Productitem.price;
-                        OverAllTotal += total;
+                  {productdata.map((cartItem) => {
+                    // cartItem.products is an array of products in this cart item
 
-                        return (
-                          <div
-                            key={Productitem.id}
-                            className="p-4 border-b hover:bg-green-50"
-                          >
-                            <div className="flex gap-4 items-center">
+                    return (
+                      <div
+                        key={cartItem.id}
+                        className="p-4 border-b hover:bg-green-50"
+                      >
+                        {cartItem.products.map((product) => {
+                          // For each product inside this cart
+                          const count = counts[product.id] || 1;
+                          const total = count * product.price;
+                          OverAllTotal += total;
+
+                          return (
+                            <div
+                              key={product.id}
+                              className="flex gap-4 items-center mb-4"
+                            >
+                              {/* Image if available */}
                               <Image
-                                src={Productitem.image[0].url}
-                                alt={Productitem.name}
+                                src={product.image[0]?.url}
+                                alt={product.name}
                                 height={80}
                                 width={80}
                                 unoptimized
                                 className="rounded-2xl"
                               />
+
                               <div className="flex flex-col gap-2 w-full">
                                 <div className="flex justify-between">
                                   <h4 className="text-md font-semibold">
-                                    {Productitem.name.slice(0, 20)}
+                                    {product.name.length > 20
+                                      ? product.name.slice(0, 20) + "..."
+                                      : product.name}
                                   </h4>
                                   <h6 className="text-green-700 font-bold">
-                                    ₹{Productitem.price}
+                                    ₹{product.price}
                                   </h6>
                                 </div>
                                 <div className="flex justify-between items-center">
@@ -201,7 +210,7 @@ const Navbar = () => {
                                       height={26}
                                       width={26}
                                       onClick={() =>
-                                        dispatch(decrement(Productitem.id))
+                                        dispatch(decrement(product.id))
                                       }
                                       className="cursor-pointer"
                                     />
@@ -214,7 +223,7 @@ const Navbar = () => {
                                       height={26}
                                       width={26}
                                       onClick={() =>
-                                        dispatch(increment(Productitem.id))
+                                        dispatch(increment(product.id))
                                       }
                                       className="cursor-pointer"
                                     />
@@ -225,17 +234,17 @@ const Navbar = () => {
                                   <Trash2
                                     className="h-6 w-6 text-red-600 cursor-pointer"
                                     onClick={() =>
-                                      deleteData(Cartitem.documentId)
+                                      deleteData(product.documentId)
                                     }
                                   />
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        );
-                      }
-                    })
-                  )}
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* Sticky Checkout Section */}

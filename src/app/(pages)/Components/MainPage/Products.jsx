@@ -54,42 +54,55 @@ const Products = () => {
         router.push("/signUp");
         return;
       }
-      const getData = await axios.get(UserCartUrl);
-      const AlreadyCart = getData.data.data;
 
-      const existingProduct = AlreadyCart.some(
-        (cartItem) => cartItem.ProductId === item.documentId
+      // 1. Fetch existing cart entries
+      const res = await axios.get(UserCartUrl);
+
+      const userCart = res.data.data.find(
+        (cart) => cart.users_permissions_user?.id == UserId
       );
 
-      if (existingProduct) {
-        toast.error("Heads up! This product is already waiting in your cart.", {
-          position: "top-right",
-          autoClose: 2000,
-          theme: "colored",
-        });
-      } else {
-        await axios.post(
-          UserCartUrl,
-          {
-            data: {
-              ProductId: item.documentId,
-              users_permissions_user: UserId,
-            },
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${token}`, // ✅ secure POST
-            },
-          }
-        );
+      // 2. If user already has a cart
+      if (userCart) {
+        const productIds = userCart.products.map((p) => p.documentId);
 
-        toast.success("Product added – keep exploring!", {
+        if (productIds.includes(item.documentId)) {
+          toast.error("This product is already in your cart", {
+            position: "top-right",
+            autoClose: 2000,
+            theme: "colored",
+          });
+        } else {
+          await axios.put(
+            `https://strapi-backend-1-7qd7.onrender.com/api/user-carts/${userCart.documentId}`,
+            {
+              data: {
+                products: [...productIds, item.documentId], // Add new product ID
+              },
+            }
+          );
+
+          toast.success("Product added to existing cart!", {
+            position: "top-right",
+            autoClose: 2000,
+            theme: "colored",
+          });
+        }
+      } else {
+        // 3. If user has no cart yet, create new
+        await axios.post(UserCartUrl, {
+          data: {
+            users_permissions_user: UserId,
+            products: [item.documentId], // create cart with first product
+          },
+        });
+
+        toast.success("Cart created and product added!", {
           position: "top-right",
           autoClose: 2000,
           theme: "colored",
         });
       }
-      //  Add new product to cart
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong");
