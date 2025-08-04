@@ -8,7 +8,7 @@ const page = () => {
       <h2 className="text-center text-green-800 text-2xl mb-4 block font-semibold">
         Final Touch Before Delivery
       </h2>
-      <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-10 flex flex-col gap-10">
+      <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-10 flex flex-col">
         <Address />
         <OrderDetail />
       </div>
