@@ -102,16 +102,16 @@ const Products = () => {
         }}
       >
         {data.map((item, index) => {
-          const imageUrl = item.image?.[0]?.url
-            ? `https://strapi-backend-1-7qd7.onrender.com${item.image[0].url}`
-            : "/placeholder.png";
+          // const imageUrl = item.image?.[0]?.url
+          //   ? `https://strapi-backend-1-7qd7.onrender.com${item.image[0].url}`
+          //   : "/placeholder.png";
 
           return (
             <SwiperSlide key={index}>
               <div className=" border rounded-2xl border-gray-300 p-4 flex flex-col gap-2 cursor-pointer group shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex justify-center relative">
                   <Image
-                    src={imageUrl}
+                    src={item.image[0].url}
                     alt={item.name}
                     height={180}
                     width={180}
@@ -152,8 +152,8 @@ const Products = () => {
                       <div className="flex flex-col md:flex-row gap-6 p-4 rounded-2xl border relative">
                         <div className="w-full md:w-1/2 flex justify-center">
                           <InnerImageZoom
-                            src={imageUrl}
-                            zoomSrc={imageUrl}
+                            src={item.image[0].url}
+                            zoomSrc={item.image[0].url}
                             zoomType="hover"
                             zoomPreload={true}
                             alt={item.name}

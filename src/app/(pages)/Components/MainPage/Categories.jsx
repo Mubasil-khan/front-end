@@ -19,6 +19,7 @@ const Categories = () => {
     try {
       const res = await axios.get(Categoriesurl);
       setData(res.data.data);
+      console.log("Images Is.................", res.data.data);
     } catch (error) {
       console.error(error);
     }
@@ -57,7 +58,7 @@ const Categories = () => {
               <div className="flex flex-col justify-center items-center gap-2 bg-green-100 group py-4  rounded-3xl ">
                 <div className=" duration-300 group-hover:scale-110">
                   <Image
-                    src={`https://strapi-backend-1-7qd7.onrender.com${item?.icon?.[0]?.url}`}
+                    src={item?.icon[0]?.url}
                     alt="CategoriesImage"
                     height={80}
                     width={80}

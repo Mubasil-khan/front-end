@@ -9,8 +9,8 @@ export default function Home() {
    <div>
     <Banner />
     <Fetures />
-    {/* <Categories />
-    <Products /> */}
+    <Categories />
+    <Products />
     <CenterBanner />
     
    </div>

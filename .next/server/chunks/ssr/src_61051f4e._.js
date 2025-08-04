@@ -25,7 +25,6 @@ const Banner = ()=>{
         try {
             const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(bannerUrl);
             setData(response.data.data);
-            console.log("Image....", response.data.data);
         } catch (error) {
             console.error(error);
         }
@@ -41,7 +40,7 @@ const Banner = ()=>{
             children: data.map((item)=>{
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SwiperSlide"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative min-h-40 md:min-h-100 w-full h-full overflow-hidden rounded-3xl shadow-md",
+                        className: "relative min-h-40 md:min-h-80 w-full h-full overflow-hidden rounded-3xl shadow-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             src: item.BannerImg[0].url,
                             alt: "Banner",
@@ -50,28 +49,28 @@ const Banner = ()=>{
                             className: "object-fill"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-                            lineNumber: 35,
+                            lineNumber: 33,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-                        lineNumber: 34,
+                        lineNumber: 32,
                         columnNumber: 15
                     }, ("TURBOPACK compile-time value", void 0))
                 }, item.id, false, {
                     fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-                    lineNumber: 33,
+                    lineNumber: 31,
                     columnNumber: 13
                 }, ("TURBOPACK compile-time value", void 0));
             })
         }, void 0, false, {
             fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-            lineNumber: 30,
+            lineNumber: 28,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/app/(pages)/Components/MainPage/Banner.jsx",
-        lineNumber: 29,
+        lineNumber: 27,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -105,6 +104,7 @@ const Categories = ()=>{
         try {
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(Categoriesurl);
             setData(res.data.data);
+            console.log("Images Is.................", res.data.data);
         } catch (error) {
             console.error(error);
         }
@@ -117,7 +117,7 @@ const Categories = ()=>{
                 children: "Shop by Categories"
             }, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Swiper"], {
@@ -150,19 +150,19 @@ const Categories = ()=>{
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: " duration-300 group-hover:scale-110",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            src: `https://strapi-backend-1-7qd7.onrender.com${item?.icon?.[0]?.url}`,
+                                            src: item?.icon[0]?.url,
                                             alt: "CategoriesImage",
                                             height: 80,
                                             width: 80,
                                             unoptimized: true
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                                            lineNumber: 59,
+                                            lineNumber: 60,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                                        lineNumber: 58,
+                                        lineNumber: 59,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -170,34 +170,34 @@ const Categories = ()=>{
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                                        lineNumber: 67,
+                                        lineNumber: 68,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                                lineNumber: 57,
+                                lineNumber: 58,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                            lineNumber: 56,
+                            lineNumber: 57,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, item.id, false, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(pages)/Components/MainPage/Categories.jsx",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -499,7 +499,9 @@ const Products = ()=>{
                     }
                 },
                 children: data.map((item, index)=>{
-                    const imageUrl = item.image?.[0]?.url ? `https://strapi-backend-1-7qd7.onrender.com${item.image[0].url}` : "/placeholder.png";
+                    // const imageUrl = item.image?.[0]?.url
+                    //   ? `https://strapi-backend-1-7qd7.onrender.com${item.image[0].url}`
+                    //   : "/placeholder.png";
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SwiperSlide"], {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: " border rounded-2xl border-gray-300 p-4 flex flex-col gap-2 cursor-pointer group shadow-sm hover:shadow-md transition-shadow",
@@ -508,7 +510,7 @@ const Products = ()=>{
                                     className: "flex justify-center relative",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            src: imageUrl,
+                                            src: item.image[0].url,
                                             alt: item.name,
                                             height: 180,
                                             width: 180,
@@ -629,8 +631,8 @@ const Products = ()=>{
                                                                 className: "w-full md:w-1/2 flex justify-center",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$inner$2d$image$2d$zoom$2f$es$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                                        src: imageUrl,
-                                                                        zoomSrc: imageUrl,
+                                                                        src: item.image[0].url,
+                                                                        zoomSrc: item.image[0].url,
                                                                         zoomType: "hover",
                                                                         zoomPreload: true,
                                                                         alt: item.name,
