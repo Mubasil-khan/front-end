@@ -142,7 +142,7 @@ const Address = ()=>{
     const handalNext = (item)=>{
         setNext(item);
     };
-    const OrderUrl = "http://localhost:1337/api/orders?populate=*";
+    const OrderUrl = "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
     const handalOrder = async ()=>{
         try {
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(OrderUrl, {
@@ -181,7 +181,7 @@ const Address = ()=>{
                             children: "Shipping & Address Information"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                            lineNumber: 71,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -199,7 +199,7 @@ const Address = ()=>{
                                                 children: "Enter FullName"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 81,
+                                                lineNumber: 82,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -210,13 +210,13 @@ const Address = ()=>{
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 87,
+                                                lineNumber: 88,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 80,
+                                        lineNumber: 81,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -227,7 +227,7 @@ const Address = ()=>{
                                                 children: "Enter Email"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 98,
+                                                lineNumber: 99,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -239,13 +239,13 @@ const Address = ()=>{
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 104,
+                                                lineNumber: 105,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 97,
+                                        lineNumber: 98,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -256,7 +256,7 @@ const Address = ()=>{
                                                 children: "Enter Phone"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 116,
+                                                lineNumber: 117,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -269,13 +269,13 @@ const Address = ()=>{
                                                 minLength: 10
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 122,
+                                                lineNumber: 123,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 115,
+                                        lineNumber: 116,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -286,7 +286,7 @@ const Address = ()=>{
                                                 children: "Enter Address"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 135,
+                                                lineNumber: 136,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -298,13 +298,13 @@ const Address = ()=>{
                                                 minLength: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 141,
+                                                lineNumber: 142,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 134,
+                                        lineNumber: 135,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -318,7 +318,7 @@ const Address = ()=>{
                                                         children: "Enter city"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 155,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -330,13 +330,13 @@ const Address = ()=>{
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 160,
+                                                        lineNumber: 161,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 153,
+                                                lineNumber: 154,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -347,7 +347,7 @@ const Address = ()=>{
                                                         children: "Enter state"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 172,
+                                                        lineNumber: 173,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -359,19 +359,19 @@ const Address = ()=>{
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 178,
+                                                        lineNumber: 179,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 171,
+                                                lineNumber: 172,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -385,7 +385,7 @@ const Address = ()=>{
                                                         children: "zip"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 192,
+                                                        lineNumber: 193,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -397,13 +397,13 @@ const Address = ()=>{
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 198,
+                                                        lineNumber: 199,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 191,
+                                                lineNumber: 192,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -414,7 +414,7 @@ const Address = ()=>{
                                                         children: "Enter country"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 210,
+                                                        lineNumber: 211,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -426,19 +426,19 @@ const Address = ()=>{
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                        lineNumber: 216,
+                                                        lineNumber: 217,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 209,
+                                                lineNumber: 210,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 190,
+                                        lineNumber: 191,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -454,24 +454,24 @@ const Address = ()=>{
                                         children: "Next"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 228,
+                                        lineNumber: 229,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                lineNumber: 75,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                            lineNumber: 74,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                    lineNumber: 70,
+                    lineNumber: 71,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AccordionItem"], {
@@ -482,7 +482,7 @@ const Address = ()=>{
                             children: "Select Payment Method"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                            lineNumber: 246,
+                            lineNumber: 247,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -500,7 +500,7 @@ const Address = ()=>{
                                                 className: "w-5 h-5 text-green-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 252,
+                                                lineNumber: 253,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -508,13 +508,13 @@ const Address = ()=>{
                                                 children: "Credit / Debit Card"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 258,
+                                                lineNumber: 259,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 251,
+                                        lineNumber: 252,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -527,7 +527,7 @@ const Address = ()=>{
                                                 className: "w-5 h-5 text-green-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 262,
+                                                lineNumber: 263,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -535,13 +535,13 @@ const Address = ()=>{
                                                 children: "UPI / QR Code"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 268,
+                                                lineNumber: 269,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 261,
+                                        lineNumber: 262,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -554,7 +554,7 @@ const Address = ()=>{
                                                 className: "w-5 h-5 text-green-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 272,
+                                                lineNumber: 273,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -562,13 +562,13 @@ const Address = ()=>{
                                                 children: "Cash on Delivery (COD)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 278,
+                                                lineNumber: 279,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 271,
+                                        lineNumber: 272,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -581,7 +581,7 @@ const Address = ()=>{
                                                 className: "w-5 h-5 text-green-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 282,
+                                                lineNumber: 283,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -589,13 +589,13 @@ const Address = ()=>{
                                                 children: "Net Banking"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                                lineNumber: 288,
+                                                lineNumber: 289,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 281,
+                                        lineNumber: 282,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -604,24 +604,24 @@ const Address = ()=>{
                                         children: "Next"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                        lineNumber: 290,
+                                        lineNumber: 291,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                lineNumber: 250,
+                                lineNumber: 251,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                            lineNumber: 249,
+                            lineNumber: 250,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                    lineNumber: 245,
+                    lineNumber: 246,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AccordionItem"], {
@@ -632,7 +632,7 @@ const Address = ()=>{
                             children: "Return Policy"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                            lineNumber: 301,
+                            lineNumber: 302,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -642,37 +642,37 @@ const Address = ()=>{
                                     children: "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                    lineNumber: 305,
+                                    lineNumber: 306,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                                    lineNumber: 310,
+                                    lineNumber: 311,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                            lineNumber: 304,
+                            lineNumber: 305,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-                    lineNumber: 300,
+                    lineNumber: 301,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-            lineNumber: 62,
+            lineNumber: 63,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/app/(pages)/Components/Checkout/Address.jsx",
-        lineNumber: 61,
+        lineNumber: 62,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -233,7 +233,7 @@ const Navbar = () => {
                       <span>₹{OverAllTotal}</span>
                     </h2>
                     <Link
-                      href="/Checkout"
+                      href="/checkOut"
                       className="bg-green-800 text-white text-center px-6 py-2 rounded-md hover:bg-green-700 transition"
                     >
                       Checkout

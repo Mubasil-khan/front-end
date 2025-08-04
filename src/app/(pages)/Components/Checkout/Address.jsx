@@ -27,7 +27,8 @@ const Address = () => {
     setNext(item);
   };
 
-  const OrderUrl = "http://localhost:1337/api/orders?populate=*";
+  const OrderUrl =
+    "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
 
   const handalOrder = async () => {
     try {
