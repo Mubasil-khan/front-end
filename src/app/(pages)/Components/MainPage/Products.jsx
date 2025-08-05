@@ -77,7 +77,7 @@ const Products = () => {
             `https://strapi-backend-1-7qd7.onrender.com/api/user-carts/${userCart.documentId}`,
             {
               data: {
-                products: [...productIds, item.documentId], // Add new product ID
+                products: [...productIds, item.documentId],
               },
             }
           );
@@ -106,6 +106,23 @@ const Products = () => {
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong");
+    }
+  };
+
+  const handalQty = async (id) => {
+    try {
+      const res = await axios.put(
+        `https://strapi-backend-1-7qd7.onrender.com/api/products/${id}`,
+        {
+          data: {
+            Qty: 1, // Default or calculated value
+          },
+        }
+      );
+
+      console.log("Qty updated:", res.data.data);
+    } catch (error) {
+      console.error("Qty update error:", error);
     }
   };
 
@@ -222,6 +239,7 @@ const Products = () => {
                               <button
                                 className="bg-green-600 hover:bg-green-700 flex items-center gap-2 text-white py-2 px-6 rounded-full text-sm font-medium shadow"
                                 onClick={() => {
+                                  handalQty(item.documentId);
                                   handalCart(item);
                                 }}
                               >

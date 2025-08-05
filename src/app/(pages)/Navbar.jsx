@@ -70,7 +70,7 @@ const Navbar = () => {
   const deleteData = async (id) => {
     try {
       const res = await axios.delete(
-        `https://strapi-backend-1-7qd7.onrender.com/api/user-carts/${id}`
+        `https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]/${id}`
       );
 
       GetCartData();
@@ -82,6 +82,22 @@ const Navbar = () => {
   const handalLogout = () => {
     localStorage.removeItem("Token");
     setLogin(false);
+  };
+
+  const handalQty = async (id) => {
+    try {
+      const updatedQty = counts[id] || 1;
+
+      const res = await axios.put(`http://localhost:1337/api/products/${id}`, {
+        data: {
+          Qty: updatedQty,
+        },
+      });
+
+      console.log("Qty updated:", res.data.data);
+    } catch (error) {
+      console.error("Qty update error:", error);
+    }
   };
 
   // Product
@@ -212,9 +228,10 @@ const Navbar = () => {
                                       alt="decrease"
                                       height={26}
                                       width={26}
-                                      onClick={() =>
-                                        dispatch(decrement(product.id))
-                                      }
+                                      onClick={() => {
+                                        dispatch(decrement(product.id)),
+                                          handalQty(product.id);
+                                      }}
                                       className="cursor-pointer"
                                     />
                                     <span className="text-green-800 font-medium">
@@ -236,7 +253,9 @@ const Navbar = () => {
                                   </h6>
                                   <Trash2
                                     className="h-6 w-6 text-red-600 cursor-pointer"
-                                    onClick={() => deleteData(cartItem.id)}
+                                    onClick={() =>
+                                      deleteData(product.documentId)
+                                    }
                                   />
                                 </div>
                               </div>

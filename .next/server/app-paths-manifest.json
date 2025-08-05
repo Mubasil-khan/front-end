@@ -1,8 +1,4 @@
 {
-  "/(pages)/CheckOut/page": "app/(pages)/CheckOut/page.js",
-  "/(pages)/category/[categoryName]/page": "app/(pages)/category/[categoryName]/page.js",
-  "/(pages)/signIn/page": "app/(pages)/signIn/page.js",
-  "/(pages)/signUp/page": "app/(pages)/signUp/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }
