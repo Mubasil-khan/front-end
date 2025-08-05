@@ -206,7 +206,7 @@ const Navbar = () => {
                                 </div>
 
                                 <div className="flex justify-between items-center">
-                                  <div className="flex items-center gap-2">
+                                  <div className="flex items-center gap-4">
                                     <Image
                                       src="/Image/remove_icon_red.png"
                                       alt="decrease"

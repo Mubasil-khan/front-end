@@ -705,18 +705,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 const OrderDetail = ()=>{
     _s();
-    const [product, setPeoduct] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [userCart, setUserCart] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const UCart = "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate=*";
-    const ProductUrl = "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
-    const getProduct = async ()=>{
-        try {
-            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(ProductUrl);
-            setPeoduct(res.data.data);
-        } catch (error) {
-            console.error(error);
-        }
-    };
+    const UCart = "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image&populate=users_permissions_user";
     const getUserCart = async ()=>{
         try {
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(UCart);
@@ -728,11 +718,9 @@ const OrderDetail = ()=>{
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "OrderDetail.useEffect": ()=>{
             getUserCart();
-            getProduct();
         }
     }["OrderDetail.useEffect"], []);
     const [qty, setQty] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(22);
-    const OrderUrl = "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
     const handalOrder = async (id)=>{
         try {
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].put("https://strapi-backend-1-7qd7.onrender.com/api/orders".concat(id), {
@@ -759,71 +747,70 @@ const OrderDetail = ()=>{
                         children: "Your Cart"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 65,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    userCart.map((Cartitem)=>product.map((productitem)=>{
-                            if (Cartitem.ProductId === productitem.documentId) {
-                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-4 ",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            src: productitem.image[0].url,
-                                            alt: "productitem.image",
-                                            height: 60,
-                                            width: 60,
-                                            unoptimized: true,
-                                            className: "rounded-lg"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 71,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex flex-col col-span-2",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                    className: "text-green-800 text-lg",
-                                                    children: productitem.name.length < 20 ? productitem.name : productitem.name.slice(0, 20) + "..."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                    lineNumber: 80,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                                                    className: "text-green-800 text-md",
-                                                    children: qty
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                    lineNumber: 85,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 79,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                            className: "text-green-800 text-lg text-end",
-                                            children: productitem.price
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 87,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, productitem.id, true, {
-                                    fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                    lineNumber: 70,
-                                    columnNumber: 17
-                                }, ("TURBOPACK compile-time value", void 0));
-                            }
-                        }))
+                    userCart.map((Cartitem)=>Cartitem.products.map((products)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-4",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        src: products.image[0].url,
+                                        alt: "products.image",
+                                        height: 60,
+                                        width: 60,
+                                        unoptimized: true,
+                                        className: "rounded-lg"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                        lineNumber: 53,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex flex-col col-span-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                className: "text-green-800 text-lg",
+                                                children: products.name.length < 18 ? products.name : products.name.slice(0, 18) + "..."
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                                lineNumber: 62,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                                                className: "text-green-800 text-md",
+                                                children: [
+                                                    "Qty :",
+                                                    10
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                                lineNumber: 67,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                        lineNumber: 61,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        className: "text-green-800 text-lg text-end",
+                                        children: 10 * products.price
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                        lineNumber: 69,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, Cartitem.id, true, {
+                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                lineNumber: 52,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0))))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                lineNumber: 64,
+                lineNumber: 48,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -834,7 +821,7 @@ const OrderDetail = ()=>{
                         children: "Order Summary"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 97,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -845,7 +832,7 @@ const OrderDetail = ()=>{
                                 children: "Subtotal"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 102,
+                                lineNumber: 82,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -853,13 +840,13 @@ const OrderDetail = ()=>{
                                 children: "₹1,200.00"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 103,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 101,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -870,7 +857,7 @@ const OrderDetail = ()=>{
                                 children: "Shipping"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 107,
+                                lineNumber: 87,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -878,13 +865,13 @@ const OrderDetail = ()=>{
                                 children: "₹50.00"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 108,
+                                lineNumber: 88,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 106,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -894,27 +881,27 @@ const OrderDetail = ()=>{
                                 children: "Discount"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 112,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "-₹100.00"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 113,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 111,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "border-t border-green-700 my-3"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 116,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -924,20 +911,20 @@ const OrderDetail = ()=>{
                                 children: "Total"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 119,
+                                lineNumber: 99,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "₹1,150.00"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 120,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 118,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -946,23 +933,23 @@ const OrderDetail = ()=>{
                         children: "Proceed to Checkout"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 123,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                lineNumber: 96,
+                lineNumber: 76,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-        lineNumber: 63,
+        lineNumber: 47,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(OrderDetail, "7iFaeHRMrrnK65wqv9cpywd/hhE=");
+_s(OrderDetail, "L4Yh+zxZOMIPpINsXd0DXO3qMiQ=");
 _c = OrderDetail;
 const __TURBOPACK__default__export__ = OrderDetail;
 var _c;

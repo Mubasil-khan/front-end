@@ -4,23 +4,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const OrderDetail = () => {
-  const [product, setPeoduct] = useState([]);
   const [userCart, setUserCart] = useState([]);
 
   const UCart =
-    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate=*";
-
-  const ProductUrl =
-    "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
-
-  const getProduct = async () => {
-    try {
-      const res = await axios.get(ProductUrl);
-      setPeoduct(res.data.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image&populate=users_permissions_user";
 
   const getUserCart = async () => {
     try {
@@ -33,12 +20,9 @@ const OrderDetail = () => {
 
   useEffect(() => {
     getUserCart();
-    getProduct();
   }, []);
 
   const [qty, setQty] = useState(22);
-  const OrderUrl =
-    "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
 
   const handalOrder = async (id) => {
     try {
@@ -64,33 +48,29 @@ const OrderDetail = () => {
       <div className="h-fit max-h-80 overflow-auto bg-green-100 p-4 rounded-lg flex flex-col gap-6 ">
         <h2 className="text-2xl text-green-800 font-semibold">Your Cart</h2>
         {userCart.map((Cartitem) =>
-          product.map((productitem) => {
-            if (Cartitem.ProductId === productitem.documentId) {
-              return (
-                <div className="grid grid-cols-4 " key={productitem.id}>
-                  <Image
-                    src={productitem.image[0].url}
-                    alt="productitem.image"
-                    height={60}
-                    width={60}
-                    unoptimized
-                    className="rounded-lg"
-                  />
-                  <div className="flex flex-col col-span-2">
-                    <h4 className="text-green-800 text-lg">
-                      {productitem.name.length < 20
-                        ? productitem.name
-                        : productitem.name.slice(0, 20) + "..."}
-                    </h4>
-                    <h6 className="text-green-800 text-md">{qty}</h6>
-                  </div>
-                  <h4 className="text-green-800 text-lg text-end">
-                    {productitem.price}
-                  </h4>
-                </div>
-              );
-            }
-          })
+          Cartitem.products.map((products) => (
+            <div className="grid grid-cols-4" key={Cartitem.id}>
+              <Image
+                src={products.image[0].url}
+                alt="products.image"
+                height={60}
+                width={60}
+                unoptimized
+                className="rounded-lg"
+              />
+              <div className="flex flex-col col-span-2">
+                <h4 className="text-green-800 text-lg">
+                  {products.name.length < 18
+                    ? products.name
+                    : products.name.slice(0, 18) + "..."}
+                </h4>
+                <h6 className="text-green-800 text-md">Qty :{10}</h6>
+              </div>
+              <h4 className="text-green-800 text-lg text-end">
+                {10 * products.price}
+              </h4>
+            </div>
+          ))
         )}
       </div>
       <div className="bg-green-100 rounded-lg p-4 shadow-md w-full max-w-md">

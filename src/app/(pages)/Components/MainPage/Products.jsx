@@ -50,7 +50,6 @@ const Products = () => {
     try {
       const token = localStorage.getItem("Token");
       const UserId = localStorage.getItem("userId");
-
       if (!token) {
         router.push("/signUp");
         return;

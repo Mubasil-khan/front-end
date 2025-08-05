@@ -3,7 +3,7 @@ import React from "react";
 
 const Fetures = () => {
   return (
-    <div className=" p-4 container mx-auto ">
+    <div className=" px-4 md:p-4 container mx-auto ">
       <div className="grid bg-green-100 rounded-4xl grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4 justify-between  px-6 py-6 lg:py-2">
         <div className="flex flex-col gap-1 items-center justify-center ">
           <Truck className="h-12 w-12 md:h-15 md:w-15 text-green-800" />
