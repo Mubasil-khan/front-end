@@ -46,24 +46,22 @@ const Navbar = () => {
   const [cartdata, setCartdata] = useState([]);
 
   const UserCartUrl =
-    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image";
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image&populate=users_permissions_user";
 
   const GetCartData = async () => {
     try {
       const token = localStorage.getItem("Token");
       const userId = localStorage.getItem("userId");
 
-      const res = await axios.get(UserCartUrl);
-      setProductdata(res.data.data);
+      const res = await axios.get(UserCartUrl); // <-- now includes user relation
 
-      console.log("Data Is ..............", res.data.data);
-
-      // Filter cart items to only include current user's items
+      // Filter only cart items for this user
       const userCartItems = res.data.data.filter(
-        (item) => item?.users_permissions_user?.id == userId
+        (item) => item.users_permissions_user?.id == userId
       );
 
-      setCartdata(userCartItems);
+      setProductdata(userCartItems);
+      console.log("Filtered User Cart Items:", userCartItems);
     } catch (error) {
       console.error("Cart fetch error:", error);
     }
@@ -163,33 +161,37 @@ const Navbar = () => {
                 {/* Scrollable Cart Items */}
                 <div className="flex-1 overflow-y-auto">
                   {productdata.map((cartItem) => {
-                    // cartItem.products is an array of products in this cart item
-
                     return (
                       <div
                         key={cartItem.id}
                         className="p-4 border-b hover:bg-green-50"
                       >
                         {cartItem.products.map((product) => {
-                          // For each product inside this cart
                           const count = counts[product.id] || 1;
                           const total = count * product.price;
                           OverAllTotal += total;
+
+                          const imageUrl = product.image?.[0]?.url;
 
                           return (
                             <div
                               key={product.id}
                               className="flex gap-4 items-center mb-4"
                             >
-                              {/* Image if available */}
-                              <Image
-                                src={product.image[0]?.url}
-                                alt={product.name}
-                                height={80}
-                                width={80}
-                                unoptimized
-                                className="rounded-2xl"
-                              />
+                              {imageUrl && (
+                                <Image
+                                  src={
+                                    imageUrl.startsWith("http")
+                                      ? imageUrl
+                                      : `https://strapi-backend-1-7qd7.onrender.com${imageUrl}`
+                                  }
+                                  alt={product.name}
+                                  height={80}
+                                  width={80}
+                                  unoptimized
+                                  className="rounded-2xl"
+                                />
+                              )}
 
                               <div className="flex flex-col gap-2 w-full">
                                 <div className="flex justify-between">
@@ -202,6 +204,7 @@ const Navbar = () => {
                                     ₹{product.price}
                                   </h6>
                                 </div>
+
                                 <div className="flex justify-between items-center">
                                   <div className="flex items-center gap-2">
                                     <Image
@@ -233,9 +236,7 @@ const Navbar = () => {
                                   </h6>
                                   <Trash2
                                     className="h-6 w-6 text-red-600 cursor-pointer"
-                                    onClick={() =>
-                                      deleteData(product.documentId)
-                                    }
+                                    onClick={() => deleteData(cartItem.id)}
                                   />
                                 </div>
                               </div>

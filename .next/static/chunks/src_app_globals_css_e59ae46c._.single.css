@@ -1090,10 +1090,6 @@
     overflow-y: auto;
   }
 
-  .scroll-smooth {
-    scroll-behavior: smooth;
-  }
-
   .rounded {
     border-radius: .25rem;
   }
@@ -1157,11 +1153,6 @@
   .rounded-b-3xl {
     border-bottom-right-radius: var(--radius-3xl);
     border-bottom-left-radius: var(--radius-3xl);
-  }
-
-  .rounded-b-full {
-    border-bottom-right-radius: 3.40282e38px;
-    border-bottom-left-radius: 3.40282e38px;
   }
 
   .border {
