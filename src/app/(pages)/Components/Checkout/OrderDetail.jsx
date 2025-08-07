@@ -39,7 +39,16 @@ const OrderDetail = () => {
   const OrderUrl =
     "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
 
-  const [orderId, setOrderId] = useState(null); // <-- Save the created order ID
+  const deleteDataInCart =
+    "https://strapi-backend-1-7qd7.onrender.com/api/user-carts";
+
+  const deleteData = async (id) => {
+    try {
+      const res = await axios.delete(`${deleteDataInCart}/${id}`);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handalOrder = async () => {
     try {
@@ -75,21 +84,19 @@ const OrderDetail = () => {
         },
       });
 
-      toast.success("Order Please Successfully", {
-        position: "top-right",
-        autoClose: 2000,
-        theme: "colored",
-      });
+      toast.success(
+        "Your order has been placed successfully. Thank you for shopping with us!",
+        {
+          position: "top-right",
+          autoClose: 2000,
+          theme: "colored",
+        }
+      );
       setInterval(() => {
         router.push("/");
-      }, 1000);
+      }, 100);
     } catch (error) {
       console.error("Error creating order:", error.response?.data);
-      toast.error("enter All Details", {
-        position: "top-right",
-        autoClose: 2000,
-        theme: "colored",
-      });
     }
   };
 
@@ -464,19 +471,31 @@ const OrderDetail = () => {
               <span>{Finaltotal}</span>
             </div>
 
-            <button
-              className="mt-4 w-full bg-green-800 text-white py-2 rounded hover:bg-green-900 transition cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent form submit
-                setBorder(true);
-                if (isFormValid) {
-                  handalOrder();
-                  handalNext("item-1"); // Go to next accordion item
-                }
-              }}
-            >
-              Proceed to Checkout
-            </button>
+            {userCart.map((Cartitem) => (
+              <button
+                className="mt-4 w-full bg-green-800 text-white py-2 rounded hover:bg-green-900 transition cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent form submit
+                  setBorder(true);
+                  if (isFormValid) {
+                    handalOrder();
+                    if (handalOrder) {
+                      deleteData(Cartitem.documentId);
+                    }
+
+                    handalNext("item-1"); // Go to next accordion item
+                  } else {
+                    toast.error("Enter all details correctly", {
+                      position: "top-right",
+                      autoClose: 2000,
+                      theme: "colored",
+                    });
+                  }
+                }}
+              >
+                Proceed to Checkout
+              </button>
+            ))}
           </div>
         </div>
       </div>

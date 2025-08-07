@@ -127,7 +127,7 @@ const Products = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 my-4 block">
+    <div className="container mx-auto px-4 py-0 md:py-4 block">
       <ToastContainer />
       <h2 className="font-bold text-xl md:text-2xl text-green-800 mb-5 ">
         Farm-Fresh Goodness : <br className="sm:hidden" /> Fruits & Vegetables

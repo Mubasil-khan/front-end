@@ -132,7 +132,14 @@ const OrderDetail = ()=>{
         setNext(item);
     };
     const OrderUrl = "https://strapi-backend-1-7qd7.onrender.com/api/orders?populate=*";
-    const [orderId, setOrderId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null); // <-- Save the created order ID
+    const deleteDataInCart = "https://strapi-backend-1-7qd7.onrender.com/api/user-carts";
+    const deleteData = async (id)=>{
+        try {
+            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${deleteDataInCart}/${id}`);
+        } catch (error) {
+            console.error(error);
+        }
+    };
     const handalOrder = async ()=>{
         try {
             const OrderDetails = [];
@@ -164,21 +171,16 @@ const OrderDetail = ()=>{
                     OrderDetails: OrderDetails
                 }
             });
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success("Order Please Successfully", {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success("Your order has been placed successfully. Thank you for shopping with us!", {
                 position: "top-right",
                 autoClose: 2000,
                 theme: "colored"
             });
             setInterval(()=>{
                 router.push("/");
-            }, 1000);
+            }, 100);
         } catch (error) {
             console.error("Error creating order:", error.response?.data);
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error("enter All Details", {
-                position: "top-right",
-                autoClose: 2000,
-                theme: "colored"
-            });
         }
     };
     const isFormValid = !!fullName.trim() && !!email.trim() && !!phone && !!address.trim() && !!city.trim() && !!state.trim() && !!zip && !!country.trim();
@@ -210,7 +212,7 @@ const OrderDetail = ()=>{
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ToastContainer"], {}, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                lineNumber: 144,
+                lineNumber: 151,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -234,7 +236,7 @@ const OrderDetail = ()=>{
                                             children: "Shipping & Address Information"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 156,
+                                            lineNumber: 163,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -252,7 +254,7 @@ const OrderDetail = ()=>{
                                                                 children: "Enter FullName"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 166,
+                                                                lineNumber: 173,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -263,13 +265,13 @@ const OrderDetail = ()=>{
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 172,
+                                                                lineNumber: 179,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 165,
+                                                        lineNumber: 172,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -280,7 +282,7 @@ const OrderDetail = ()=>{
                                                                 children: "Enter Email"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 183,
+                                                                lineNumber: 190,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -292,13 +294,13 @@ const OrderDetail = ()=>{
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 189,
+                                                                lineNumber: 196,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 182,
+                                                        lineNumber: 189,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -309,7 +311,7 @@ const OrderDetail = ()=>{
                                                                 children: "Enter Phone"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 201,
+                                                                lineNumber: 208,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -322,13 +324,13 @@ const OrderDetail = ()=>{
                                                                 minLength: 10
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 207,
+                                                                lineNumber: 214,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 207,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -339,7 +341,7 @@ const OrderDetail = ()=>{
                                                                 children: "Enter Address"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 220,
+                                                                lineNumber: 227,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -351,13 +353,13 @@ const OrderDetail = ()=>{
                                                                 minLength: 20
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 226,
+                                                                lineNumber: 233,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 219,
+                                                        lineNumber: 226,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -371,7 +373,7 @@ const OrderDetail = ()=>{
                                                                         children: "Enter city"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 239,
+                                                                        lineNumber: 246,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -383,13 +385,13 @@ const OrderDetail = ()=>{
                                                                         required: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 245,
+                                                                        lineNumber: 252,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 238,
+                                                                lineNumber: 245,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -400,7 +402,7 @@ const OrderDetail = ()=>{
                                                                         children: "Enter state"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 257,
+                                                                        lineNumber: 264,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -412,19 +414,19 @@ const OrderDetail = ()=>{
                                                                         required: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 263,
+                                                                        lineNumber: 270,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 256,
+                                                                lineNumber: 263,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 244,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -438,7 +440,7 @@ const OrderDetail = ()=>{
                                                                         children: "zip"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 277,
+                                                                        lineNumber: 284,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -450,13 +452,13 @@ const OrderDetail = ()=>{
                                                                         required: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 283,
+                                                                        lineNumber: 290,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 276,
+                                                                lineNumber: 283,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -467,7 +469,7 @@ const OrderDetail = ()=>{
                                                                         children: "Enter country"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 295,
+                                                                        lineNumber: 302,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -479,19 +481,19 @@ const OrderDetail = ()=>{
                                                                         required: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                        lineNumber: 301,
+                                                                        lineNumber: 308,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 294,
+                                                                lineNumber: 301,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 275,
+                                                        lineNumber: 282,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -506,24 +508,24 @@ const OrderDetail = ()=>{
                                                         children: "Next"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 313,
+                                                        lineNumber: 320,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 160,
+                                                lineNumber: 167,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 159,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                    lineNumber: 155,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AccordionItem"], {
@@ -534,7 +536,7 @@ const OrderDetail = ()=>{
                                             children: "Select Payment Method"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 330,
+                                            lineNumber: 337,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -552,7 +554,7 @@ const OrderDetail = ()=>{
                                                                 className: "w-5 h-5 text-green-600"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 336,
+                                                                lineNumber: 343,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -560,13 +562,13 @@ const OrderDetail = ()=>{
                                                                 children: "Credit / Debit Card"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 342,
+                                                                lineNumber: 349,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 335,
+                                                        lineNumber: 342,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -579,7 +581,7 @@ const OrderDetail = ()=>{
                                                                 className: "w-5 h-5 text-green-600"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 346,
+                                                                lineNumber: 353,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -587,13 +589,13 @@ const OrderDetail = ()=>{
                                                                 children: "UPI / QR Code"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 352,
+                                                                lineNumber: 359,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 345,
+                                                        lineNumber: 352,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -606,7 +608,7 @@ const OrderDetail = ()=>{
                                                                 className: "w-5 h-5 text-green-600"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 356,
+                                                                lineNumber: 363,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -614,13 +616,13 @@ const OrderDetail = ()=>{
                                                                 children: "Cash on Delivery (COD)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 362,
+                                                                lineNumber: 369,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 355,
+                                                        lineNumber: 362,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -633,7 +635,7 @@ const OrderDetail = ()=>{
                                                                 className: "w-5 h-5 text-green-600"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 366,
+                                                                lineNumber: 373,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -641,13 +643,13 @@ const OrderDetail = ()=>{
                                                                 children: "Net Banking"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 372,
+                                                                lineNumber: 379,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 365,
+                                                        lineNumber: 372,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -656,24 +658,24 @@ const OrderDetail = ()=>{
                                                         children: "Next"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 374,
+                                                        lineNumber: 381,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 334,
+                                                lineNumber: 341,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 333,
+                                            lineNumber: 340,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                    lineNumber: 329,
+                                    lineNumber: 336,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AccordionItem"], {
@@ -684,7 +686,7 @@ const OrderDetail = ()=>{
                                             children: "Return Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 385,
+                                            lineNumber: 392,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$accordion$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -694,37 +696,37 @@ const OrderDetail = ()=>{
                                                     children: "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                    lineNumber: 389,
+                                                    lineNumber: 396,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: "Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                    lineNumber: 394,
+                                                    lineNumber: 401,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                            lineNumber: 388,
+                                            lineNumber: 395,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                    lineNumber: 384,
+                                    lineNumber: 391,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                            lineNumber: 147,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 146,
+                        lineNumber: 153,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -738,7 +740,7 @@ const OrderDetail = ()=>{
                                         children: "Your Cart"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                        lineNumber: 406,
+                                        lineNumber: 413,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     userCart.map((Cartitem)=>Cartitem.products.map((products)=>{
@@ -759,7 +761,7 @@ const OrderDetail = ()=>{
                                                         className: "rounded-lg"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 418,
+                                                        lineNumber: 425,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -770,7 +772,7 @@ const OrderDetail = ()=>{
                                                                 children: products.name.length < 18 ? products.name : products.name.slice(0, 18) + "..."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 427,
+                                                                lineNumber: 434,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
@@ -781,13 +783,13 @@ const OrderDetail = ()=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                                lineNumber: 432,
+                                                                lineNumber: 439,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 426,
+                                                        lineNumber: 433,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -795,20 +797,20 @@ const OrderDetail = ()=>{
                                                         children: total
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                        lineNumber: 434,
+                                                        lineNumber: 441,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, Cartitem.id, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 417,
+                                                lineNumber: 424,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0));
                                         }))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 405,
+                                lineNumber: 412,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -819,7 +821,7 @@ const OrderDetail = ()=>{
                                         children: "Order Summary"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                        lineNumber: 441,
+                                        lineNumber: 448,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -830,7 +832,7 @@ const OrderDetail = ()=>{
                                                 children: "Subtotal"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 446,
+                                                lineNumber: 453,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -838,13 +840,13 @@ const OrderDetail = ()=>{
                                                 children: OverAllTotal
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 447,
+                                                lineNumber: 454,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                        lineNumber: 445,
+                                        lineNumber: 452,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -855,7 +857,7 @@ const OrderDetail = ()=>{
                                                 children: "Shipping"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 451,
+                                                lineNumber: 458,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -863,13 +865,13 @@ const OrderDetail = ()=>{
                                                 children: charge
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 452,
+                                                lineNumber: 459,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                        lineNumber: 450,
+                                        lineNumber: 457,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -879,41 +881,11 @@ const OrderDetail = ()=>{
                                                 children: "Discount 10%"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 456,
-                                                columnNumber: 15
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: discount
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                                lineNumber: 457,
-                                                columnNumber: 15
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                        lineNumber: 455,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "border-t border-green-700 my-3"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                        lineNumber: 460,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex justify-between items-center text-xl font-bold text-green-900",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "Total"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
                                                 lineNumber: 463,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: Finaltotal
+                                                children: discount
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
                                                 lineNumber: 464,
@@ -925,38 +897,77 @@ const OrderDetail = ()=>{
                                         lineNumber: 462,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "mt-4 w-full bg-green-800 text-white py-2 rounded hover:bg-green-900 transition cursor-pointer",
-                                        onClick: (e)=>{
-                                            e.preventDefault(); // Prevent form submit
-                                            setBorder(true);
-                                            if (isFormValid) {
-                                                handalOrder();
-                                                handalNext("item-1"); // Go to next accordion item
-                                            }
-                                        },
-                                        children: "Proceed to Checkout"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "border-t border-green-700 my-3"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
                                         lineNumber: 467,
                                         columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex justify-between items-center text-xl font-bold text-green-900",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: "Total"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                                lineNumber: 470,
+                                                columnNumber: 15
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: Finaltotal
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                                lineNumber: 471,
+                                                columnNumber: 15
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                        lineNumber: 469,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    userCart.map((Cartitem)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "mt-4 w-full bg-green-800 text-white py-2 rounded hover:bg-green-900 transition cursor-pointer",
+                                            onClick: (e)=>{
+                                                e.preventDefault(); // Prevent form submit
+                                                setBorder(true);
+                                                if (isFormValid) {
+                                                    handalOrder();
+                                                    if ("TURBOPACK compile-time truthy", 1) {
+                                                        deleteData(Cartitem.documentId);
+                                                    }
+                                                    handalNext("item-1"); // Go to next accordion item
+                                                } else {
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error("Enter all details correctly", {
+                                                        position: "top-right",
+                                                        autoClose: 2000,
+                                                        theme: "colored"
+                                                    });
+                                                }
+                                            },
+                                            children: "Proceed to Checkout"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
+                                            lineNumber: 475,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                                lineNumber: 440,
+                                lineNumber: 447,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                        lineNumber: 404,
+                        lineNumber: 411,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/Checkout/OrderDetail.jsx",
-                lineNumber: 145,
+                lineNumber: 152,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

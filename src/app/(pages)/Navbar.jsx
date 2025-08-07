@@ -66,18 +66,6 @@ const Navbar = () => {
     }
   };
 
-  const deleteData = async (id) => {
-    try {
-      const res = await axios.delete(
-        `https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]/${id}`
-      );
-
-      GetCartData();
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const handalLogout = () => {
     localStorage.removeItem("Token");
     setLogin(false);
@@ -89,14 +77,17 @@ const Navbar = () => {
     GetCartData();
     // getData();
   }, []);
-  // if (cartdata.length === 0) {
-  //   return (
-  //     <div>
-  //       <h1>Your Cart Is empty</h1>
-  //     </div>
-  //   );
-  // }
-  //.........................
+
+  const deleteProduct = async (id) => {
+    try {
+      await axios.delete(
+        `https://strapi-backend-1-7qd7.onrender.com/api/user-carts/${id}`
+      );
+      GetCartData();
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const pathname = usePathname();
   const hidecart = pathname === "/CheckOut";
@@ -130,7 +121,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          {!hidecart && (
+          {!hidecart && login && (
             <Sheet onOpenChange={(isOpen) => isOpen && GetCartData()}>
               <SheetTrigger asChild>
                 {!hidecart && (
@@ -145,23 +136,31 @@ const Navbar = () => {
 
                 {/* Scrollable Cart Items */}
                 <div className="flex-1 overflow-y-auto">
-                  {productdata.map((cartItem) => {
-                    return (
-                      <div
-                        key={cartItem.id}
-                        className="p-4 border-b hover:bg-green-50"
-                      >
+                  {productdata.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center py-16 text-gray-600">
+                      <ShoppingCart className="h-20 w-20 mb-4 text-gray-400" />
+                      <h1 className="text-2xl font-semibold">
+                        Your cart is empty
+                      </h1>
+                      <p className="text-sm mt-2 text-gray-500">
+                        Looks like you haven't added anything yet.
+                      </p>
+                    </div>
+                  ) : (
+                    productdata.map((cartItem) => (
+                      <div key={cartItem.id}>
                         {cartItem.products.map((product) => {
                           const count = counts[product.id] || 1;
                           const total = count * product.price;
-                          OverAllTotal += total;
-
                           const imageUrl = product.image?.[0]?.url;
+
+                          // Update OverAllTotal here only if you need it later (in parent)
+                          OverAllTotal += total;
 
                           return (
                             <div
                               key={product.id}
-                              className="flex gap-4 items-center mb-4"
+                              className="flex gap-4 items-center border-b hover:bg-green-50 p-4"
                             >
                               {imageUrl && (
                                 <Image
@@ -203,7 +202,7 @@ const Navbar = () => {
                                       className="cursor-pointer"
                                     />
                                     <span className="text-green-800 font-medium">
-                                      {counts[product.id] || 1}
+                                      {count}
                                     </span>
                                     <Image
                                       src="/Image/add_icon_green.png"
@@ -222,7 +221,7 @@ const Navbar = () => {
                                   <Trash2
                                     className="h-6 w-6 text-red-600 cursor-pointer"
                                     onClick={() =>
-                                      deleteData(product.documentId)
+                                      deleteProduct(cartItem.documentId)
                                     }
                                   />
                                 </div>
@@ -231,25 +230,31 @@ const Navbar = () => {
                           );
                         })}
                       </div>
-                    );
-                  })}
+                    ))
+                  )}
                 </div>
 
                 {/* Sticky Checkout Section */}
-                <div className="sticky bottom-0 bg-green-100 border-t shadow-md p-4 z-10 rounded-t-3xl">
-                  <div className="flex flex-col gap-4 text-lg">
-                    <h2 className="font-semibold text-green-900 flex justify-between">
-                      <span>Total Amount:</span>
-                      <span>₹{OverAllTotal}</span>
-                    </h2>
-                    <Link
-                      href="/CheckOut"
-                      className="bg-green-800 text-white text-center px-6 py-2 rounded-md hover:bg-green-700 transition"
-                    >
-                      Checkout
-                    </Link>
-                  </div>
-                </div>
+                {productdata.map((cartItem) => {
+                  return cartItem.products.length > 0 ? (
+                    <div className="sticky bottom-0 bg-green-100 border-t shadow-md p-4 z-10 rounded-t-3xl">
+                      <div className="flex flex-col gap-4 text-lg">
+                        <h2 className="font-semibold text-green-900 flex justify-between">
+                          <span>Total Amount:</span>
+                          <span>₹{OverAllTotal}</span>
+                        </h2>
+                        <Link
+                          href="/CheckOut"
+                          className="bg-green-800 text-white text-center px-6 py-2 rounded-md hover:bg-green-700 transition"
+                        >
+                          Checkout
+                        </Link>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  );
+                })}
               </SheetContent>
             </Sheet>
           )}
