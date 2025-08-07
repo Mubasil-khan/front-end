@@ -691,7 +691,6 @@ const Navbar = ()=>{
     }["Navbar.useSelector[counts]"]);
     const dispatch = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useDispatch"])();
     const [productdata, setProductdata] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [cartdata, setCartdata] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const UserCartUrl = "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image&populate=users_permissions_user";
     const GetCartData = async ()=>{
         try {
@@ -721,31 +720,6 @@ const Navbar = ()=>{
         localStorage.removeItem("Token");
         setLogin(false);
     };
-    const handalQty = async (id)=>{
-        try {
-            const updatedQty = counts[id] || 1;
-            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].put("http://localhost:1337/api/products/".concat(id), {
-                data: {
-                    Qty: updatedQty
-                }
-            });
-            console.log("Qty updated:", res.data.data);
-        } catch (error) {
-            console.error("Qty update error:", error);
-        }
-    };
-    // Product
-    // const ProductUrl =
-    //   "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
-    // const getData = async () => {
-    //   try {
-    //     const res = await axios.get(ProductUrl);
-    //     setProductdata(res.data.data);
-    //     console.log("My data For Image", res.data.data);
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navbar.useEffect": ()=>{
             const checkLogin = localStorage.getItem("Token");
@@ -782,17 +756,17 @@ const Navbar = ()=>{
                                 className: "object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 139,
+                                lineNumber: 108,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                            lineNumber: 138,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 137,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -804,7 +778,7 @@ const Navbar = ()=>{
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 149,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -813,7 +787,7 @@ const Navbar = ()=>{
                                 children: "Categories"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 152,
+                                lineNumber: 121,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -822,7 +796,7 @@ const Navbar = ()=>{
                                 children: "Cart"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 155,
+                                lineNumber: 124,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -831,13 +805,13 @@ const Navbar = ()=>{
                                 children: "Contact"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 158,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 148,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -852,12 +826,12 @@ const Navbar = ()=>{
                                             className: "h-6 w-6 cursor-pointer"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                            lineNumber: 168,
+                                            lineNumber: 137,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                        lineNumber: 166,
+                                        lineNumber: 135,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sheet$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SheetContent"], {
@@ -871,13 +845,13 @@ const Navbar = ()=>{
                                                         className: "h-6 w-6 ml-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 143,
                                                         columnNumber: 33
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                lineNumber: 173,
+                                                lineNumber: 142,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -903,7 +877,7 @@ const Navbar = ()=>{
                                                                         className: "rounded-2xl"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                        lineNumber: 198,
+                                                                        lineNumber: 167,
                                                                         columnNumber: 33
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -917,7 +891,7 @@ const Navbar = ()=>{
                                                                                         children: product.name.length > 20 ? product.name.slice(0, 20) + "..." : product.name
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                        lineNumber: 214,
+                                                                                        lineNumber: 183,
                                                                                         columnNumber: 35
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
@@ -928,13 +902,13 @@ const Navbar = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                        lineNumber: 219,
+                                                                                        lineNumber: 188,
                                                                                         columnNumber: 35
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                lineNumber: 213,
+                                                                                lineNumber: 182,
                                                                                 columnNumber: 33
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -948,21 +922,19 @@ const Navbar = ()=>{
                                                                                                 alt: "decrease",
                                                                                                 height: 26,
                                                                                                 width: 26,
-                                                                                                onClick: ()=>{
-                                                                                                    dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$features$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["decrement"])(product.id)), handalQty(product.id);
-                                                                                                },
+                                                                                                onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$features$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["decrement"])(product.id)),
                                                                                                 className: "cursor-pointer"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                                lineNumber: 226,
+                                                                                                lineNumber: 195,
                                                                                                 columnNumber: 37
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 className: "text-green-800 font-medium",
-                                                                                                children: count
+                                                                                                children: counts[product.id] || 1
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                                lineNumber: 237,
+                                                                                                lineNumber: 205,
                                                                                                 columnNumber: 37
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -974,13 +946,13 @@ const Navbar = ()=>{
                                                                                                 className: "cursor-pointer"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                                lineNumber: 240,
+                                                                                                lineNumber: 208,
                                                                                                 columnNumber: 37
                                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                        lineNumber: 225,
+                                                                                        lineNumber: 194,
                                                                                         columnNumber: 35
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
@@ -991,7 +963,7 @@ const Navbar = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                        lineNumber: 251,
+                                                                                        lineNumber: 219,
                                                                                         columnNumber: 35
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
@@ -999,37 +971,37 @@ const Navbar = ()=>{
                                                                                         onClick: ()=>deleteData(product.documentId)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                        lineNumber: 254,
+                                                                                        lineNumber: 222,
                                                                                         columnNumber: 35
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                                lineNumber: 224,
+                                                                                lineNumber: 193,
                                                                                 columnNumber: 33
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                        lineNumber: 212,
+                                                                        lineNumber: 181,
                                                                         columnNumber: 31
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, product.id, true, {
                                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                lineNumber: 193,
+                                                                lineNumber: 162,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0));
                                                         })
                                                     }, cartItem.id, false, {
                                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                        lineNumber: 181,
+                                                        lineNumber: 150,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0));
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                lineNumber: 178,
+                                                lineNumber: 147,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1044,7 +1016,7 @@ const Navbar = ()=>{
                                                                     children: "Total Amount:"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                    lineNumber: 274,
+                                                                    lineNumber: 242,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1054,13 +1026,13 @@ const Navbar = ()=>{
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                                    lineNumber: 275,
+                                                                    lineNumber: 243,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                            lineNumber: 273,
+                                                            lineNumber: 241,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1069,37 +1041,37 @@ const Navbar = ()=>{
                                                             children: "Checkout"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                            lineNumber: 277,
+                                                            lineNumber: 245,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                    lineNumber: 272,
+                                                    lineNumber: 240,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                lineNumber: 271,
+                                                lineNumber: 239,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                        lineNumber: 171,
+                                        lineNumber: 140,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 165,
+                                lineNumber: 134,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                 className: "h-6 w-6 cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 289,
+                                lineNumber: 257,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$align$2d$justify$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlignJustify$3e$__["AlignJustify"], {
@@ -1107,7 +1079,7 @@ const Navbar = ()=>{
                                 onClick: manageMenu
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 290,
+                                lineNumber: 258,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             login ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1120,12 +1092,12 @@ const Navbar = ()=>{
                                                 className: "text-green-500"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                lineNumber: 301,
+                                                lineNumber: 269,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                            lineNumber: 300,
+                                            lineNumber: 268,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1135,7 +1107,7 @@ const Navbar = ()=>{
                                                     children: "Light"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                    lineNumber: 304,
+                                                    lineNumber: 272,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1143,7 +1115,7 @@ const Navbar = ()=>{
                                                     children: "Dark"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                    lineNumber: 305,
+                                                    lineNumber: 273,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1152,24 +1124,24 @@ const Navbar = ()=>{
                                                     children: "Logout"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                                    lineNumber: 306,
+                                                    lineNumber: 274,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                            lineNumber: 303,
+                                            lineNumber: 271,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                    lineNumber: 297,
+                                    lineNumber: 265,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 296,
+                                lineNumber: 264,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/signUp",
@@ -1177,19 +1149,19 @@ const Navbar = ()=>{
                                 children: "Login"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                                lineNumber: 313,
+                                lineNumber: 281,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 163,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                lineNumber: 136,
+                lineNumber: 105,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             hide && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1201,7 +1173,7 @@ const Navbar = ()=>{
                         children: "Home"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 324,
+                        lineNumber: 292,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1210,7 +1182,7 @@ const Navbar = ()=>{
                         children: "Categories"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 327,
+                        lineNumber: 295,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1219,7 +1191,7 @@ const Navbar = ()=>{
                         children: "Cart"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 330,
+                        lineNumber: 298,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1228,23 +1200,23 @@ const Navbar = ()=>{
                         children: "Contact"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                        lineNumber: 333,
+                        lineNumber: 301,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Navbar.jsx",
-                lineNumber: 323,
+                lineNumber: 291,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(pages)/Navbar.jsx",
-        lineNumber: 135,
+        lineNumber: 104,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(Navbar, "GuwjNdLdAVMNVJuuIHN/wLMtxkU=", false, function() {
+_s(Navbar, "84CjvC4HO9oyk7HQCcr3HhUtjyg=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSelector"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useDispatch"],
@@ -1715,7 +1687,7 @@ function RootLayout(param) {
     let { children } = param;
     _s();
     const pathName = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
-    const hideNavbar = pathName === "/signUp" || pathName === "/signIn";
+    const Hide = pathName === "/signUp" || pathName === "/signIn";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "en",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -1723,10 +1695,10 @@ function RootLayout(param) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$ReduxProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ReduxProvider"], {
                     children: [
-                        !hideNavbar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$pages$292f$Navbar$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        !Hide && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$pages$292f$Navbar$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/layout.js",
                             lineNumber: 33,
-                            columnNumber: 21
+                            columnNumber: 15
                         }, this),
                         children
                     ]
@@ -1735,10 +1707,10 @@ function RootLayout(param) {
                     lineNumber: 32,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$pages$292f$Footer$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                !Hide && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$pages$292f$Footer$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/layout.js",
                     lineNumber: 36,
-                    columnNumber: 9
+                    columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {

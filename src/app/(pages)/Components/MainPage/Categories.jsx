@@ -36,11 +36,11 @@ const Categories = () => {
   };
   return (
     <div
-      className="container mx-auto p-4 my-4 block "
+      className="container mx-auto p-4 lg:my-4 block "
       id="categories"
       data-aos="fade-up"
     >
-      <h2 className="font-bold text-2xl md:text-3xl text-green-800 my-5 ">
+      <h2 className="font-bold text-2xl md:text-3xl text-green-800 mb-5 mt-2">
         Shop by Categories
       </h2>
       <Swiper

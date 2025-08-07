@@ -23,17 +23,17 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   const pathName = usePathname()
-  const hideNavbar = pathName === "/signUp" || pathName === "/signIn"
+  const Hide = pathName === "/signUp" || pathName === "/signIn"
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <ReduxProvider>
-      {!hideNavbar&&<Navbar />}
+      {!Hide&&<Navbar />}
         {children}
         </ReduxProvider>
-        <Footer />
+        {!Hide&&<Footer />}
       </body>
     </html>
   );

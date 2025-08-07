@@ -47,7 +47,7 @@ const CategoryDetail = () => {
   }, []);
 
   return (
-    <div className="container mx-auto my-10 p-4">
+    <div className="container mx-auto  p-4 block">
       <h2 className="text-green-800 font-semibold text-2xl my-6">
         Explore {decodeURIComponent(params.categoryName.trim())} Products
       </h2>

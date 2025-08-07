@@ -43,7 +43,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const [productdata, setProductdata] = useState([]);
-  const [cartdata, setCartdata] = useState([]);
 
   const UserCartUrl =
     "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image&populate=users_permissions_user";
@@ -83,36 +82,6 @@ const Navbar = () => {
     localStorage.removeItem("Token");
     setLogin(false);
   };
-
-  const handalQty = async (id) => {
-    try {
-      const updatedQty = counts[id] || 1;
-
-      const res = await axios.put(`http://localhost:1337/api/products/${id}`, {
-        data: {
-          Qty: updatedQty,
-        },
-      });
-
-      console.log("Qty updated:", res.data.data);
-    } catch (error) {
-      console.error("Qty update error:", error);
-    }
-  };
-
-  // Product
-  // const ProductUrl =
-  //   "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
-
-  // const getData = async () => {
-  //   try {
-  //     const res = await axios.get(ProductUrl);
-  //     setProductdata(res.data.data);
-  //     console.log("My data For Image", res.data.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
 
   useEffect(() => {
     const checkLogin = localStorage.getItem("Token");
@@ -228,14 +197,13 @@ const Navbar = () => {
                                       alt="decrease"
                                       height={26}
                                       width={26}
-                                      onClick={() => {
-                                        dispatch(decrement(product.id)),
-                                          handalQty(product.id);
-                                      }}
+                                      onClick={() =>
+                                        dispatch(decrement(product.id))
+                                      }
                                       className="cursor-pointer"
                                     />
                                     <span className="text-green-800 font-medium">
-                                      {count}
+                                      {counts[product.id] || 1}
                                     </span>
                                     <Image
                                       src="/Image/add_icon_green.png"
