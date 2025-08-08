@@ -7,17 +7,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import "swiper/css";
 
 const Categories = () => {
   useEffect(() => {
     display();
-  }, []);
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-    });
   }, []);
 
   const Categoriesurl =
@@ -25,6 +21,17 @@ const Categories = () => {
 
   const [data, setData] = useState([]);
 
+  const [skeleton, setSkeleton] = useState(true);
+
+  useEffect(() => {
+    if (!skeleton) {
+      AOS.init({
+        duration: 800,
+        once: false,
+      });
+      AOS.refresh(); // Refresh after DOM changes
+    }
+  }, [skeleton]);
   const display = async () => {
     try {
       const res = await axios.get(Categoriesurl);
@@ -32,9 +39,15 @@ const Categories = () => {
       console.log("Images Is.................", res.data.data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setSkeleton(false);
     }
   };
-  return (
+  return skeleton ? (
+    <div className=" container mx-auto p-4 lg:my-4 block space-y-3">
+      <Skeleton className="h-60 w-full rounded-xl" />
+    </div>
+  ) : (
     <div
       className="container mx-auto p-4 lg:my-4 block "
       id="categories"
@@ -67,27 +80,25 @@ const Categories = () => {
         }}
       >
         {data.map((item) => (
-          <div key={item.id}>
-            <SwiperSlide>
-              <Link
-                href={`/category/${item.name}`}
-                className="flex flex-col justify-center items-center gap-2 bg-green-100 group py-4  rounded-3xl "
-              >
-                <div className=" duration-300 group-hover:scale-110">
-                  <Image
-                    src={item?.icon[0]?.url}
-                    alt="CategoriesImage"
-                    height={80}
-                    width={80}
-                    unoptimized
-                  />
-                </div>
-                <h4 className="text-lg font-semibold text-green-800  text-center">
-                  {item.name}
-                </h4>
-              </Link>
-            </SwiperSlide>
-          </div>
+          <SwiperSlide key={item.id}>
+            <Link
+              href={`/category/${item.name}`}
+              className="flex flex-col justify-center items-center gap-2 bg-green-100 group py-4  rounded-3xl "
+            >
+              <div className=" duration-300 group-hover:scale-110">
+                <Image
+                  src={item?.icon[0]?.url}
+                  alt="CategoriesImage"
+                  height={80}
+                  width={80}
+                  unoptimized
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-green-800  text-center">
+                {item.name}
+              </h4>
+            </Link>
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>

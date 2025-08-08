@@ -112,9 +112,9 @@ const Navbar = () => {
           <Link href="/#categories" className="text-green-800 text-lg ">
             Categories
           </Link>
-          <Link href="/cart" className="text-green-800 text-lg ">
+          {/* <Link href="/cart" className="text-green-800 text-lg ">
             Cart
-          </Link>
+          </Link> */}
           <Link href="/#Contact" className="text-green-800 text-lg ">
             Contact
           </Link>

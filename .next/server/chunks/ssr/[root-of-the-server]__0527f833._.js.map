@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Ecommerce/front-end/src/app/%28pages%29/Components/Products/AllProducts.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Products = () => {\r\n  const GetAllPRoducts = () => {\r\n    try {\r\n    } catch (error) {}\r\n  };\r\n  return (\r\n    <div>\r\n      <h1>...............</h1>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Products;\r\n"],"names":[],"mappings":";;;;AAAA;;;AAEA,MAAM,WAAW;IACf,MAAM,iBAAiB;QACrB,IAAI,CACJ,EAAE,OAAO,OAAO,CAAC;IACnB;IACA,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV;uCAEe","debugId":null}},
+    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":["file:///C:/Ecommerce/front-end/src/app/%28pages%29/Products/page.jsx"],"sourcesContent":["import React from \"react\";\r\nimport AllProducts from \"../Components/Products/AllProducts\";\r\n\r\nconst page = () => {\r\n  return (\r\n    <div>\r\n      <AllProducts />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default page;\r\n"],"names":[],"mappings":";;;;AAAA;AACA;;;;AAEA,MAAM,OAAO;IACX,qBACE,8OAAC;kBACC,cAAA,8OAAC,iKAAA,CAAA,UAAW;;;;;;;;;;AAGlB;uCAEe","debugId":null}}]
+}

@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Skeleton } from "@/components/ui/skeleton";
 import "swiper/css";
 
 const Banner = () => {
   const [data, setData] = useState([]);
-
+  const [skeleton, setSkeleton] = useState(true);
   const bannerUrl =
     "https://strapi-backend-1-7qd7.onrender.com/api/banners?populate=*";
 
@@ -17,12 +18,17 @@ const Banner = () => {
       setData(response.data.data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setSkeleton(false);
     }
   };
 
   useEffect(() => {
-    Banners();
+    setInterval(() => {
+      Banners();
+    }, 400);
   }, []);
+
   return (
     <div className="container mx-auto p-4  block">
       <Swiper spaceBetween={50} slidesPerView={1}>

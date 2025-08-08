@@ -5,7 +5,7 @@
   "static/chunks/node_modules_next_a695dab3._.js",
   "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_b854acb4._.js",
   "static/chunks/node_modules_axios_lib_99999129._.js",
-  "static/chunks/node_modules_9e5bda8b._.js",
+  "static/chunks/node_modules_4abc2050._.js",
   "static/chunks/[root-of-the-server]__a2f1cdd3._.css"
 ],
     source: "dynamic"

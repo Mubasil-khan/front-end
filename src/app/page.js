@@ -3,6 +3,7 @@ import Categories from "./(pages)/Components/MainPage/Categories";
 import CenterBanner from "./(pages)/Components/MainPage/CenterBanner";
 import Fetures from "./(pages)/Components/MainPage/Fetures";
 import Products from "./(pages)/Components/MainPage/Products";
+import ProductsTwo from "./(pages)/Components/MainPage/ProductsTwo";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <Categories />
     <Products />
     <CenterBanner />
+    <ProductsTwo />
     
    </div>
   );

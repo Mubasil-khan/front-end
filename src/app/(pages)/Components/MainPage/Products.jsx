@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Boxes, Heart, Rocket, ShoppingCart } from "lucide-react";
+import { Boxes, ChevronRight, Heart, Rocket, ShoppingCart } from "lucide-react";
 import { Star, StarHalf } from "lucide-react";
 
 import "swiper/css";
@@ -21,6 +21,7 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { DialogTitle } from "@radix-ui/react-dialog";
+import Link from "next/link";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -40,7 +41,13 @@ const Products = () => {
   const getData = async () => {
     try {
       const res = await axios.get(ProductUrl);
-      setData(res.data.data);
+      const Filter = res.data.data;
+      const filnalFilter = Filter.filter(
+        (item) =>
+          item.categories?.[0]?.name === "Fruits" ||
+          item.categories?.[0]?.name === "Vegetables"
+      );
+      setData(filnalFilter);
     } catch (error) {
       console.error(error);
     }
@@ -129,9 +136,18 @@ const Products = () => {
   return (
     <div className="container mx-auto px-4 py-0 md:py-4 block">
       <ToastContainer />
-      <h2 className="font-bold text-xl md:text-2xl text-green-800 mb-5 ">
-        Farm-Fresh Goodness : <br className="sm:hidden" /> Fruits & Vegetables
-      </h2>
+      <div className="flex items-center justify-between">
+        <h4 className="font-bold text-xl md:text-2xl text-green-800 mb-5 ">
+          Farm-Fresh Goodness : <br className="sm:hidden" /> Fruits & Vegetables
+        </h4>
+        <Link
+          href="/Products"
+          className="text-green-800 font-semibold flex items-center gap-1"
+        >
+          View All <ChevronRight className="h-6 w-6" />
+        </Link>
+      </div>
+
       <Swiper
         spaceBetween={40}
         breakpoints={{
@@ -142,10 +158,6 @@ const Products = () => {
         }}
       >
         {data.map((item, index) => {
-          // const imageUrl = item.image?.[0]?.url
-          //   ? `https://strapi-backend-1-7qd7.onrender.com${item.image[0].url}`
-          //   : "/placeholder.png";
-
           return (
             <SwiperSlide key={index}>
               <div className=" border rounded-2xl border-gray-300 p-4 flex flex-col gap-2 cursor-pointer group shadow-sm hover:shadow-md transition-shadow">
