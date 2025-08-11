@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CenterBanner = () => {
   return (
@@ -16,9 +17,12 @@ const CenterBanner = () => {
             Fruits & Vegetables
           </h4>
           <p className="text-lg  text-green-800">Get Upto 30% Off</p>
-          <button className=" rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full">
+          <Link
+            href="/Products"
+            className=" rounded-3xl mt-2 py-1.5 bg-green-800 text-white  w-full text-center"
+          >
             Shop Now
-          </button>
+          </Link>
         </div>
       </div>
       <div className="relative w-full h-60 rounded-2xl overflow-hidden">
@@ -33,9 +37,12 @@ const CenterBanner = () => {
             Fruits & Vegetables
           </h4>
           <p className="text-lg  text-green-800">Get Upto 30% Off</p>
-          <button className=" rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full">
+          <Link
+            href="/Products"
+            className=" rounded-3xl mt-2 py-1.5 bg-green-800 text-white  w-full text-center"
+          >
             Shop Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navi
 ;
 ;
 const SignUp = ()=>{
-    const [background, setBackground] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [inputColor, setinputColor] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [userName, setUserName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
@@ -122,7 +122,7 @@ const SignUp = ()=>{
                                 id: "email",
                                 required: true,
                                 onChange: (e)=>setEmail(e.target.value),
-                                className: setBackground ? "bg-red-100 w-full p-2 rounded-xl border border-green-800" : ""
+                                className: `w-full p-2 rounded-xl border border-green-800 ${inputColor ? "bg-red-100" : ""}`
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
                                 lineNumber: 80,
@@ -142,7 +142,7 @@ const SignUp = ()=>{
                                 children: "Enter UserName"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                                lineNumber: 94,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -151,16 +151,16 @@ const SignUp = ()=>{
                                 id: "UserName",
                                 required: true,
                                 onChange: (e)=>setUserName(e.target.value),
-                                className: "w-full p-2 rounded-xl border border-green-800"
+                                className: `w-full p-2 rounded-xl border border-green-800 ${inputColor ? "bg-red-100" : ""}`
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                                lineNumber: 100,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                        lineNumber: 93,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -180,7 +180,7 @@ const SignUp = ()=>{
                                 id: "password",
                                 required: true,
                                 onChange: (e)=>setPassword(e.target.value),
-                                className: "w-full p-2 rounded-xl border border-green-800"
+                                className: `w-full p-2 rounded-xl border border-green-800 ${inputColor ? "bg-red-100" : ""}`
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
                                 lineNumber: 116,
@@ -194,16 +194,19 @@ const SignUp = ()=>{
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         className: "text-lg font-semibold text-green-50 mb-2 bg-green-800 hover:bg-green-00 p-2 rounded-2xl mt-2 cursor-pointer",
-                        onClick: handalSignup,
+                        onClick: ()=>{
+                            handalSignup();
+                            setinputColor(true);
+                        },
                         children: "Sign Up"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                        lineNumber: 125,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ToastContainer"], {}, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                        lineNumber: 131,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -226,14 +229,14 @@ const SignUp = ()=>{
                                 children: "Sign In"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                                lineNumber: 136,
+                                lineNumber: 141,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             " "
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                        lineNumber: 134,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -244,13 +247,13 @@ const SignUp = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                        lineNumber: 141,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/LoginPages/SignUp.jsx",
-                lineNumber: 133,
+                lineNumber: 138,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

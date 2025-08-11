@@ -44,6 +44,8 @@ const Navbar = () => {
 
   const [productdata, setProductdata] = useState([]);
 
+  const [countItems, setCountItems] = useState();
+
   const UserCartUrl =
     "https://strapi-backend-1-7qd7.onrender.com/api/user-carts?populate[products][populate]=image&populate=users_permissions_user";
 
@@ -60,6 +62,10 @@ const Navbar = () => {
       );
 
       setProductdata(userCartItems);
+
+      const totalProduct = userCartItems[0].products.length;
+      setCountItems(totalProduct);
+
       console.log("Filtered User Cart Items:", userCartItems);
     } catch (error) {
       console.error("Cart fetch error:", error);
@@ -125,7 +131,12 @@ const Navbar = () => {
             <Sheet onOpenChange={(isOpen) => isOpen && GetCartData()}>
               <SheetTrigger asChild>
                 {!hidecart && (
-                  <ShoppingCart className="h-6 w-6 cursor-pointer" />
+                  <div className="relative">
+                    <ShoppingCart className="h-6 w-6 cursor-pointer" />
+                    <p className="text-sm text-green-100 font-bold absolute top-[-14px] right-[-10px] bg-green-800 px-1.5 rounded-full">
+                      {countItems}
+                    </p>
+                  </div>
                 )}
               </SheetTrigger>
               <SheetContent className="h-screen p-0 flex flex-col">
@@ -139,6 +150,7 @@ const Navbar = () => {
                   {productdata.length === 0 ? (
                     <div className="flex flex-col items-center justify-center py-16 text-gray-600">
                       <ShoppingCart className="h-20 w-20 mb-4 text-gray-400" />
+
                       <h1 className="text-2xl font-semibold">
                         Your cart is empty
                       </h1>
@@ -259,7 +271,9 @@ const Navbar = () => {
             </Sheet>
           )}
 
-          <Search className="h-6 w-6 cursor-pointer" />
+          <Link href="/Products">
+            <Search className="h-6 w-6 " />
+          </Link>
           <AlignJustify
             className="h-6 w-6 md:hidden cursor-pointer"
             onClick={manageMenu}

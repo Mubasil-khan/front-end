@@ -39,6 +39,7 @@ const SignIn = () => {
 
   const [identify, setIdentify] = useState("");
   const [password, setPassword] = useState("");
+  const [inputColor, setinputColor] = useState(false);
 
   const authUrl = "https://strapi-backend-1-7qd7.onrender.com/api/auth/local";
 
@@ -83,7 +84,9 @@ const SignIn = () => {
             id="email"
             required
             onChange={(e) => setIdentify(e.target.value)}
-            className="w-full p-2 rounded-xl border border-green-800"
+            className={`w-full p-2 rounded-xl border border-green-800 ${
+              inputColor ? "bg-red-100" : ""
+            }`}
             // className={
             //   setBackground
             //     ? "bg-red-100 "
@@ -104,13 +107,20 @@ const SignIn = () => {
             name=""
             id="password"
             required
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-2 rounded-xl border border-green-800"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            className={`w-full p-2 rounded-xl border border-green-800 ${
+              inputColor ? "bg-red-100" : ""
+            }`}
           />
         </div>
         <button
           className="text-lg font-semibold text-green-50 mb-2 bg-green-800 hover:bg-green-00 p-2 rounded-2xl mt-2 cursor-pointer"
-          onClick={handalSingIn}
+          onClick={() => {
+            handalSingIn();
+            setinputColor(true);
+          }}
         >
           Sign In
         </button>

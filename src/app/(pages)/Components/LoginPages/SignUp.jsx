@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
 
 const SignUp = () => {
-  const [background, setBackground] = useState(false);
+  const [inputColor, setinputColor] = useState(false);
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -83,11 +83,9 @@ const SignUp = () => {
             id="email"
             required
             onChange={(e) => setEmail(e.target.value)}
-            className={
-              setBackground
-                ? "bg-red-100 w-full p-2 rounded-xl border border-green-800"
-                : ""
-            }
+            className={`w-full p-2 rounded-xl border border-green-800 ${
+              inputColor ? "bg-red-100" : ""
+            }`}
           />
         </div>
         <div>
@@ -103,7 +101,9 @@ const SignUp = () => {
             id="UserName"
             required
             onChange={(e) => setUserName(e.target.value)}
-            className="w-full p-2 rounded-xl border border-green-800"
+            className={`w-full p-2 rounded-xl border border-green-800 ${
+              inputColor ? "bg-red-100" : ""
+            }`}
           />
         </div>
         <div>
@@ -119,12 +119,17 @@ const SignUp = () => {
             id="password"
             required
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-2 rounded-xl border border-green-800"
+            className={`w-full p-2 rounded-xl border border-green-800 ${
+              inputColor ? "bg-red-100" : ""
+            }`}
           />
         </div>
         <button
           className="text-lg font-semibold text-green-50 mb-2 bg-green-800 hover:bg-green-00 p-2 rounded-2xl mt-2 cursor-pointer"
-          onClick={handalSignup}
+          onClick={() => {
+            handalSignup();
+            setinputColor(true);
+          }}
         >
           Sign Up
         </button>

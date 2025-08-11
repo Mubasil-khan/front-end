@@ -8,7 +8,7 @@ import "swiper/css";
 
 const Banner = () => {
   const [data, setData] = useState([]);
-  const [skeleton, setSkeleton] = useState(true);
+
   const bannerUrl =
     "https://strapi-backend-1-7qd7.onrender.com/api/banners?populate=*";
 
@@ -19,7 +19,6 @@ const Banner = () => {
     } catch (error) {
       console.error(error);
     } finally {
-      setSkeleton(false);
     }
   };
 
@@ -31,23 +30,27 @@ const Banner = () => {
 
   return (
     <div className="container mx-auto p-4  block">
-      <Swiper spaceBetween={50} slidesPerView={1}>
-        {data.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <div className="relative min-h-40 md:min-h-80 w-full h-full overflow-hidden rounded-3xl shadow-md">
-                <Image
-                  src={item.BannerImg[0].url}
-                  alt="Banner"
-                  unoptimized
-                  fill
-                  className="object-fill"
-                />
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      {data.length === 0 ? (
+        <Skeleton className="h-70 w-full rounded-xl" />
+      ) : (
+        <Swiper spaceBetween={50} slidesPerView={1}>
+          {data.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <div className="relative min-h-40 md:min-h-80 w-full h-full overflow-hidden rounded-3xl shadow-md">
+                  <Image
+                    src={item.BannerImg[0].url}
+                    alt="Banner"
+                    unoptimized
+                    fill
+                    className="object-fill"
+                  />
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      )}
     </div>
   );
 };

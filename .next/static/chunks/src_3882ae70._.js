@@ -224,6 +224,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/swiper/swiper-react.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$boxes$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Boxes$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/boxes.js [app-client] (ecmascript) <export default as Boxes>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-client] (ecmascript) <export default as ChevronRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/heart.js [app-client] (ecmascript) <export default as Heart>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rocket$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Rocket$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/rocket.js [app-client] (ecmascript) <export default as Rocket>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$cart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingCart$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shopping-cart.js [app-client] (ecmascript) <export default as ShoppingCart>");
@@ -234,9 +235,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$d
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-toastify/dist/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@radix-ui/react-dialog/dist/index.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -352,25 +355,52 @@ const Products = ()=>{
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ToastContainer"], {}, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                lineNumber: 137,
+                lineNumber: 138,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "font-bold text-xl md:text-2xl text-green-800 mb-5 ",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-between",
                 children: [
-                    "Farm-Fresh Goodness : ",
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
-                        className: "sm:hidden"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                        className: "font-bold text-xl md:text-2xl text-green-800 mb-5 ",
+                        children: [
+                            "Farm-Fresh Goodness : ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                className: "sm:hidden"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                lineNumber: 141,
+                                columnNumber: 33
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            " Fruits & Vegetables"
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                        lineNumber: 139,
-                        columnNumber: 31
+                        lineNumber: 140,
+                        columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    " Fruits & Vegetables"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        href: "/Products",
+                        className: "text-green-800 font-semibold flex items-center gap-1",
+                        children: [
+                            "View All ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                                className: "h-6 w-6"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                lineNumber: 147,
+                                columnNumber: 20
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                        lineNumber: 143,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                lineNumber: 138,
+                lineNumber: 139,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Swiper"], {
@@ -407,7 +437,7 @@ const Products = ()=>{
                                             className: "group-hover:scale-105 duration-300 object-contain"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                            lineNumber: 155,
+                                            lineNumber: 165,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -418,13 +448,13 @@ const Products = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                            lineNumber: 163,
+                                            lineNumber: 173,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                    lineNumber: 154,
+                                    lineNumber: 164,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -432,7 +462,7 @@ const Products = ()=>{
                                     children: item.name.length > 20 ? item.name.slice(0, 20) + "..." : item.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                    lineNumber: 169,
+                                    lineNumber: 179,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -443,7 +473,7 @@ const Products = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                    lineNumber: 175,
+                                    lineNumber: 185,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -457,7 +487,7 @@ const Products = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                            lineNumber: 180,
+                                            lineNumber: 190,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -468,13 +498,13 @@ const Products = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                            lineNumber: 181,
+                                            lineNumber: 191,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                    lineNumber: 179,
+                                    lineNumber: 189,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -489,19 +519,19 @@ const Products = ()=>{
                                                         size: 18
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 197,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " Add To Cart"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                lineNumber: 186,
+                                                lineNumber: 196,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                            lineNumber: 185,
+                                            lineNumber: 195,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogContent"], {
@@ -509,7 +539,7 @@ const Products = ()=>{
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogTitle"], {}, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 202,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -528,7 +558,7 @@ const Products = ()=>{
                                                                         className: "rounded-lg"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 196,
+                                                                        lineNumber: 206,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -539,13 +569,13 @@ const Products = ()=>{
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 204,
+                                                                        lineNumber: 214,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                lineNumber: 195,
+                                                                lineNumber: 205,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -556,7 +586,7 @@ const Products = ()=>{
                                                                         children: item.name.length > 20 ? item.name.slice(0, 20) + "..." : item.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 213,
+                                                                        lineNumber: 223,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -567,7 +597,7 @@ const Products = ()=>{
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 218,
+                                                                        lineNumber: 228,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -583,56 +613,12 @@ const Products = ()=>{
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 224,
+                                                                                lineNumber: 234,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                 className: "text-xs bg-green-100 text-green-700 font-medium px-2 py-0.5 rounded-full w-fit",
                                                                                 children: "Inclusive of all taxes"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 227,
-                                                                                columnNumber: 29
-                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 222,
-                                                                        columnNumber: 27
-                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "flex items-center gap-1",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                                                                className: "w-5 h-5 text-yellow-500"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 233,
-                                                                                columnNumber: 29
-                                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                                                                className: "w-5 h-5 text-yellow-500"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 234,
-                                                                                columnNumber: 29
-                                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                                                                className: "w-5 h-5 text-yellow-500"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 235,
-                                                                                columnNumber: 29
-                                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                                                                className: "w-5 h-5 text-yellow-500"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 236,
-                                                                                columnNumber: 29
-                                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2d$half$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__StarHalf$3e$__["StarHalf"], {
-                                                                                className: "w-5 h-5 text-yellow-500"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
                                                                                 lineNumber: 237,
@@ -642,6 +628,50 @@ const Products = ()=>{
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
                                                                         lineNumber: 232,
+                                                                        columnNumber: 27
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "flex items-center gap-1",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                                                className: "w-5 h-5 text-yellow-500"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                                                                lineNumber: 243,
+                                                                                columnNumber: 29
+                                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                                                className: "w-5 h-5 text-yellow-500"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                                                                lineNumber: 244,
+                                                                                columnNumber: 29
+                                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                                                className: "w-5 h-5 text-yellow-500"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                                                                lineNumber: 245,
+                                                                                columnNumber: 29
+                                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                                                className: "w-5 h-5 text-yellow-500"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                                                                lineNumber: 246,
+                                                                                columnNumber: 29
+                                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2d$half$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__StarHalf$3e$__["StarHalf"], {
+                                                                                className: "w-5 h-5 text-yellow-500"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                                                                lineNumber: 247,
+                                                                                columnNumber: 29
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
+                                                                        lineNumber: 242,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogClose"], {
@@ -660,14 +690,14 @@ const Products = ()=>{
                                                                                             size: 18
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                            lineNumber: 248,
+                                                                                            lineNumber: 258,
                                                                                             columnNumber: 33
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " Add To Cart"
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                    lineNumber: 241,
+                                                                                    lineNumber: 251,
                                                                                     columnNumber: 31
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -677,25 +707,25 @@ const Products = ()=>{
                                                                                             size: 16
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                            lineNumber: 252,
+                                                                                            lineNumber: 262,
                                                                                             columnNumber: 33
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " Wishlist"
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                    lineNumber: 251,
+                                                                                    lineNumber: 261,
                                                                                     columnNumber: 31
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                            lineNumber: 240,
+                                                                            lineNumber: 250,
                                                                             columnNumber: 29
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 239,
+                                                                        lineNumber: 249,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -708,7 +738,7 @@ const Products = ()=>{
                                                                                         size: 16
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                        lineNumber: 259,
+                                                                                        lineNumber: 269,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     "Category: ",
@@ -716,7 +746,7 @@ const Products = ()=>{
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 258,
+                                                                                lineNumber: 268,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -726,72 +756,72 @@ const Products = ()=>{
                                                                                         size: 16
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                        lineNumber: 263,
+                                                                                        lineNumber: 273,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     "Delivered in 30 mins"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                                lineNumber: 262,
+                                                                                lineNumber: 272,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                        lineNumber: 257,
+                                                                        lineNumber: 267,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                                lineNumber: 212,
+                                                                lineNumber: 222,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                        lineNumber: 194,
+                                                        lineNumber: 204,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                                    lineNumber: 193,
+                                                    lineNumber: 203,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                            lineNumber: 191,
+                                            lineNumber: 201,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                                    lineNumber: 184,
+                                    lineNumber: 194,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                            lineNumber: 153,
+                            lineNumber: 163,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, index, false, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                        lineNumber: 152,
+                        lineNumber: 162,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0));
                 })
             }, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-                lineNumber: 141,
+                lineNumber: 151,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(pages)/Components/MainPage/Products.jsx",
-        lineNumber: 136,
+        lineNumber: 137,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -859,7 +889,7 @@ const CategoryDetail = ()=>{
     _s();
     const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
     const [item, setItem] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const productUrl = "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*";
+    const productUrl = "https://strapi-backend-1-7qd7.onrender.com/api/products?populate=*&pagination[pageSize]=100";
     const getData = async ()=>{
         try {
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(productUrl);
@@ -877,7 +907,7 @@ const CategoryDetail = ()=>{
         className: "container mx-auto  p-4 block",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-green-800 font-semibold text-2xl my-6",
+                className: "text-green-800 font-semibold text-2xl my-4 px-4",
                 children: [
                     "Explore ",
                     decodeURIComponent(params.categoryName.trim()),
@@ -889,10 +919,10 @@ const CategoryDetail = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid sm:grid-cols-2 lg:grid-cols-3  gap-8 ",
+                className: "grid sm:grid-cols-2 lg:grid-cols-3  gap-8 mb-6 px-4",
                 children: item.map((item)=>{
                     var _item_categories_, _item_categories, _item_categories_1, _item_categories1;
-                    return params.categoryName === ((_item_categories = item.categories) === null || _item_categories === void 0 ? void 0 : (_item_categories_ = _item_categories[0]) === null || _item_categories_ === void 0 ? void 0 : _item_categories_.name) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    return decodeURIComponent(params.categoryName) === ((_item_categories = item.categories) === null || _item_categories === void 0 ? void 0 : (_item_categories_ = _item_categories[0]) === null || _item_categories_ === void 0 ? void 0 : _item_categories_.name) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "  border rounded-2xl border-gray-300 p-4 flex flex-col gap-2 cursor-pointer group shadow-sm hover:shadow-md transition-shadow",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -904,10 +934,10 @@ const CategoryDetail = ()=>{
                                         height: 180,
                                         width: 180,
                                         unoptimized: true,
-                                        className: "group-hover:scale-105 duration-300 object-contain"
+                                        className: "group-hover:scale-105 duration-300 object-contain h-[180px] w-[180px]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                        lineNumber: 59,
+                                        lineNumber: 60,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -918,13 +948,13 @@ const CategoryDetail = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                        lineNumber: 67,
+                                        lineNumber: 68,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -932,7 +962,7 @@ const CategoryDetail = ()=>{
                                 children: item.name.length > 20 ? item.name.slice(0, 20) + "..." : item.name
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                lineNumber: 72,
+                                lineNumber: 73,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -943,7 +973,7 @@ const CategoryDetail = ()=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                lineNumber: 78,
+                                lineNumber: 79,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -957,7 +987,7 @@ const CategoryDetail = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                        lineNumber: 83,
+                                        lineNumber: 84,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -968,13 +998,13 @@ const CategoryDetail = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                        lineNumber: 84,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                lineNumber: 82,
+                                lineNumber: 83,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -989,19 +1019,19 @@ const CategoryDetail = ()=>{
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                    lineNumber: 90,
+                                                    lineNumber: 91,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " Add To Cart"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                            lineNumber: 89,
+                                            lineNumber: 90,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                        lineNumber: 88,
+                                        lineNumber: 89,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogContent"], {
@@ -1009,7 +1039,7 @@ const CategoryDetail = ()=>{
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogTitle"], {}, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                lineNumber: 95,
+                                                lineNumber: 96,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -1028,7 +1058,7 @@ const CategoryDetail = ()=>{
                                                                     className: "rounded-lg"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 99,
+                                                                    lineNumber: 100,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1039,13 +1069,13 @@ const CategoryDetail = ()=>{
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 107,
+                                                                    lineNumber: 108,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                            lineNumber: 98,
+                                                            lineNumber: 99,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1056,7 +1086,7 @@ const CategoryDetail = ()=>{
                                                                     children: item.name.length > 20 ? item.name.slice(0, 20) + "..." : item.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 116,
+                                                                    lineNumber: 117,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1067,7 +1097,7 @@ const CategoryDetail = ()=>{
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 121,
+                                                                    lineNumber: 122,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1083,7 +1113,7 @@ const CategoryDetail = ()=>{
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                            lineNumber: 127,
+                                                                            lineNumber: 128,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1091,25 +1121,18 @@ const CategoryDetail = ()=>{
                                                                             children: "Inclusive of all taxes"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                            lineNumber: 130,
+                                                                            lineNumber: 131,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 125,
+                                                                    lineNumber: 126,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "flex items-center gap-1",
                                                                     children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                                                            className: "w-5 h-5 text-yellow-500"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                            lineNumber: 136,
-                                                                            columnNumber: 27
-                                                                        }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
                                                                             className: "w-5 h-5 text-yellow-500"
                                                                         }, void 0, false, {
@@ -1131,17 +1154,24 @@ const CategoryDetail = ()=>{
                                                                             lineNumber: 139,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0)),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2d$half$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__StarHalf$3e$__["StarHalf"], {
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
                                                                             className: "w-5 h-5 text-yellow-500"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
                                                                             lineNumber: 140,
                                                                             columnNumber: 27
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2d$half$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__StarHalf$3e$__["StarHalf"], {
+                                                                            className: "w-5 h-5 text-yellow-500"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
+                                                                            lineNumber: 141,
+                                                                            columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 135,
+                                                                    lineNumber: 136,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogClose"], {
@@ -1159,14 +1189,14 @@ const CategoryDetail = ()=>{
                                                                                         size: 18
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                                        lineNumber: 150,
+                                                                                        lineNumber: 151,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     " Add To Cart"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                                lineNumber: 144,
+                                                                                lineNumber: 145,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1176,25 +1206,25 @@ const CategoryDetail = ()=>{
                                                                                         size: 16
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                                        lineNumber: 154,
+                                                                                        lineNumber: 155,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     " Wishlist"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                                lineNumber: 153,
+                                                                                lineNumber: 154,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                        lineNumber: 143,
+                                                                        lineNumber: 144,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 142,
+                                                                    lineNumber: 143,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1207,7 +1237,7 @@ const CategoryDetail = ()=>{
                                                                                     size: 16
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                                    lineNumber: 161,
+                                                                                    lineNumber: 162,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 "Category: ",
@@ -1215,7 +1245,7 @@ const CategoryDetail = ()=>{
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                            lineNumber: 160,
+                                                                            lineNumber: 161,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1225,55 +1255,55 @@ const CategoryDetail = ()=>{
                                                                                     size: 16
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                                    lineNumber: 165,
+                                                                                    lineNumber: 166,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 "Delivered in 30 mins"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                            lineNumber: 164,
+                                                                            lineNumber: 165,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                                    lineNumber: 159,
+                                                                    lineNumber: 160,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                            lineNumber: 115,
+                                                            lineNumber: 116,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                    lineNumber: 97,
+                                                    lineNumber: 98,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                                lineNumber: 96,
+                                                lineNumber: 97,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                        lineNumber: 94,
+                                        lineNumber: 95,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                                lineNumber: 87,
+                                lineNumber: 88,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                        lineNumber: 57,
+                        lineNumber: 58,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)) : null;
                 })
@@ -1284,7 +1314,7 @@ const CategoryDetail = ()=>{
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$pages$292f$Components$2f$MainPage$2f$Products$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/(pages)/Components/CategoryDetail/CategoryDetail.jsx",
-                lineNumber: 178,
+                lineNumber: 179,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

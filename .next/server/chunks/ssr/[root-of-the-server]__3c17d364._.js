@@ -86,6 +86,8 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -103,7 +105,7 @@ const CenterBanner = ()=>{
                         className: "object-cover"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                        lineNumber: 8,
+                        lineNumber: 9,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -114,7 +116,7 @@ const CenterBanner = ()=>{
                                 children: "Fruits & Vegetables"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                                lineNumber: 15,
+                                lineNumber: 16,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -122,27 +124,28 @@ const CenterBanner = ()=>{
                                 children: "Get Upto 30% Off"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                                lineNumber: 18,
+                                lineNumber: 19,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: " rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/Products",
+                                className: " rounded-3xl mt-2 py-1.5 bg-green-800 text-white  w-full text-center",
                                 children: "Shop Now"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                                lineNumber: 19,
+                                lineNumber: 20,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                        lineNumber: 14,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -155,7 +158,7 @@ const CenterBanner = ()=>{
                         className: "object-cover"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                        lineNumber: 25,
+                        lineNumber: 29,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -166,7 +169,7 @@ const CenterBanner = ()=>{
                                 children: "Fruits & Vegetables"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                                lineNumber: 32,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -174,33 +177,34 @@ const CenterBanner = ()=>{
                                 children: "Get Upto 30% Off"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                                lineNumber: 35,
+                                lineNumber: 39,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: " rounded-3xl mt-2 py-1.5 bg-green-800 text-white cursor-pointer w-full",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/Products",
+                                className: " rounded-3xl mt-2 py-1.5 bg-green-800 text-white  w-full text-center",
                                 children: "Shop Now"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                                lineNumber: 36,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                        lineNumber: 31,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-                lineNumber: 24,
+                lineNumber: 28,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(pages)/Components/MainPage/CenterBanner.jsx",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
