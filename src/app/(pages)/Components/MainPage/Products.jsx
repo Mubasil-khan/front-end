@@ -141,8 +141,8 @@ const Products = () => {
       ) : (
         <div>
           <ToastContainer />
-          <div className="flex items-center justify-between">
-            <h4 className="font-bold text-xl md:text-2xl text-green-800 mb-5 ">
+          <div className="flex items-center justify-between mb-4">
+            <h4 className="font-bold text-xl md:text-2xl text-green-800 ">
               Farm-Fresh Goodness : <br className="sm:hidden" /> Fruits &
               Vegetables
             </h4>

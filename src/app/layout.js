@@ -56,6 +56,7 @@ useEffect(()=> {get()},[])
  
   return (
     <html lang="en">
+      <script src="//code.tidio.co/r6fkxxov9sd4b8xt7fdkmq8ifyfrdmk5.js" async></script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
 
